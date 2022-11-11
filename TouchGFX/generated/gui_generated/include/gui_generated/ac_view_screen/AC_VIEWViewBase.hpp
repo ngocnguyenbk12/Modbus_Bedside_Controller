@@ -48,6 +48,11 @@ public:
         // Override and implement this function in AC_VIEW
     }
 
+    virtual void AC_setonoff()
+    {
+        // Override and implement this function in AC_VIEW
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -66,6 +71,12 @@ protected:
     touchgfx::ButtonWithLabel DOWN;
     touchgfx::ButtonWithLabel BACK;
     touchgfx::TextAreaWithOneWildcard TEMPERATURE;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEMPERATURE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar TEMPERATUREBuffer[TEMPERATURE_SIZE];
 
 private:
 

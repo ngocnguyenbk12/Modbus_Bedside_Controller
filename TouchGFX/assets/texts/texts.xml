@@ -31,9 +31,6 @@
     <Text Id="__SingleUse_OAE4" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
-    <Text Id="__SingleUse_N7WN" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">TEMP: &lt;value&gt;</Translation>
-    </Text>
     <Text Id="__SingleUse_KX90" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BED</Translation>
     </Text>
@@ -46,10 +43,17 @@
     <Text Id="__SingleUse_BYNC" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
+    <Text Id="__SingleUse_HKY5" TypographyId="Temperature_Value" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Temp: &lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_TPZ4" TypographyId="Temperature_Value" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+    </Text>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" />
+    <Typography Id="Temperature_Value" Font="ariblk.ttf" Size="40" Bpp="4" FallbackCharacter="?" WildcardCharacterRanges="000-100" />
   </Typographies>
 </TextDatabase>

@@ -356,18 +356,22 @@
           {
             "Type": "TextArea",
             "Name": "TEMPERATURE",
-            "X": 218,
+            "X": 202,
             "Y": 17,
             "Width": 239,
             "Height": 53,
-            "TextId": "__SingleUse_N7WN",
+            "TextId": "__SingleUse_HKY5",
             "TextRotation": "0",
             "Color": {
               "Red": 219,
               "Green": 59,
               "Blue": 59
             },
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_TPZ4",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
@@ -409,7 +413,7 @@
             "InteractionName": "AC_HIGH",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "LOW"
+              "TriggerComponent": "HIGH"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -420,7 +424,7 @@
             "InteractionName": "AC_LOW",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "MED"
+              "TriggerComponent": "LOW"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -436,6 +440,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "AC_TempMed"
+            }
+          },
+          {
+            "InteractionName": "ONOFF",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SWITCH"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AC_setonoff"
             }
           }
         ]

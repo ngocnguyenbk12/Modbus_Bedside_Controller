@@ -11,6 +11,8 @@ public:
     virtual ~MAIN_MENUView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+/**         Usr Define              **/
 protected:
 };
 

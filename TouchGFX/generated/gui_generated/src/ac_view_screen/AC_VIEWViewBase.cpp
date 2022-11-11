@@ -19,12 +19,14 @@ AC_VIEWViewBase::AC_VIEWViewBase() :
 
     SWITCH.setXY(22, 17);
     SWITCH.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    SWITCH.setAction(buttonCallback);
 
     HIGH.setXY(1, 92);
     HIGH.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     HIGH.setLabelText(touchgfx::TypedText(T___SINGLEUSE_PANZ));
     HIGH.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     HIGH.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    HIGH.setAction(buttonCallback);
 
     MED.setXY(1, 152);
     MED.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
@@ -61,10 +63,12 @@ AC_VIEWViewBase::AC_VIEWViewBase() :
     BACK.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     BACK.setAction(buttonCallback);
 
-    TEMPERATURE.setPosition(218, 17, 239, 53);
+    TEMPERATURE.setPosition(202, 17, 239, 53);
     TEMPERATURE.setColor(touchgfx::Color::getColorFromRGB(219, 59, 59));
     TEMPERATURE.setLinespacing(0);
-    TEMPERATURE.setTypedText(touchgfx::TypedText(T___SINGLEUSE_N7WN));
+    Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_TPZ4).getText());
+    TEMPERATURE.setWildcard(TEMPERATUREBuffer);
+    TEMPERATURE.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HKY5));
 
     add(__background);
     add(tiledImage1);
@@ -85,13 +89,22 @@ void AC_VIEWViewBase::setupScreen()
 
 void AC_VIEWViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &MED)
+    if (&src == &SWITCH)
     {
-        //AC_LOW
-        //When MED clicked call virtual function
-        //Call AC_TempLow
-        AC_TempLow();
-
+        //ONOFF
+        //When SWITCH clicked call virtual function
+        //Call AC_setonoff
+        AC_setonoff();
+    }
+    else if (&src == &HIGH)
+    {
+        //AC_HIGH
+        //When HIGH clicked call virtual function
+        //Call AC_TempHigh
+        AC_TempHigh();
+    }
+    else if (&src == &MED)
+    {
         //AC_MED
         //When MED clicked call virtual function
         //Call AC_TempMed
@@ -99,10 +112,10 @@ void AC_VIEWViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     }
     else if (&src == &LOW)
     {
-        //AC_HIGH
+        //AC_LOW
         //When LOW clicked call virtual function
-        //Call AC_TempHigh
-        AC_TempHigh();
+        //Call AC_TempLow
+        AC_TempLow();
     }
     else if (&src == &UP)
     {
