@@ -37,6 +37,8 @@ Drivers/BSP/stm32746g_discovery_qspi.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  d:\lv_modbus\project\touchgfx_v2_rework\drivers\bsp\components\n25q128a\n25q128a.h
 
 D:/LV_Modbus/Project/TouchGFX_v2_Rework/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h:
@@ -112,5 +114,9 @@ D:/LV_Modbus/Project/TouchGFX_v2_Rework/Drivers/BSP/STM32746G-Discovery/stm32746
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
+
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
+
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 
 d:\lv_modbus\project\touchgfx_v2_rework\drivers\bsp\components\n25q128a\n25q128a.h:

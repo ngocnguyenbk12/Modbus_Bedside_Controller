@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2021 STMicroelectronics.
+  * Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -30,7 +30,7 @@ SoftwareMJPEGDecoder mjpegdecoder1((uint8_t*)lineBuffer);
 
 LOCATION_PRAGMA("Video_RGB_Buffer")
 uint32_t videoRGBBuffer[130560] LOCATION_ATTRIBUTE("Video_RGB_Buffer");
-DoubleBufferedVideoController<1, 480, 272, 480 * 2U, Bitmap::RGB565> videoController;
+DoubleBufferedVideoController<1, 480, 272, 480*2U, Bitmap::RGB565> videoController;
 
 //Singleton Factory
 VideoController& VideoController::getInstance()
@@ -45,11 +45,11 @@ using namespace touchgfx;
 
 namespace
 {
-// Use the section "TouchGFX_Framebuffer" in the linker script to specify the placement of the buffer
-LOCATION_PRAGMA("TouchGFX_Framebuffer")
-uint32_t frameBuf[(480 * 272 * 2 + 3) / 4 * 2] LOCATION_ATTRIBUTE("TouchGFX_Framebuffer");
-static uint16_t lcd_int_active_line;
-static uint16_t lcd_int_porch_line;
+    // Use the section "TouchGFX_Framebuffer" in the linker script to specify the placement of the buffer
+    LOCATION_PRAGMA("TouchGFX_Framebuffer")
+    uint32_t frameBuf[(480 * 272 * 2 + 3) / 4 * 2] LOCATION_ATTRIBUTE("TouchGFX_Framebuffer");
+    static uint16_t lcd_int_active_line;
+    static uint16_t lcd_int_porch_line;
 }
 
 void TouchGFXGeneratedHAL::initialize()
@@ -163,7 +163,7 @@ void TouchGFXGeneratedHAL::FlushCache()
     }
 }
 
-extern "C" void videoTaskFunc(void* argument)
+extern "C" void videoTaskFunc(void *argument)
 {
     videoController.decoderTaskEntry();
 }

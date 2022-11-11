@@ -44,4 +44,5 @@ Drivers/Components \
 Drivers/STM32F7xx_HAL_Driver \
 Middlewares/FreeRTOS \
 Middlewares/LibJPEG \
+Middlewares/Modbus/Src \
 

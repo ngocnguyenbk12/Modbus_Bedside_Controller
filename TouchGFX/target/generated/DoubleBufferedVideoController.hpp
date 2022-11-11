@@ -277,7 +277,7 @@ public:
         // Check if we should decode and show a new video frame in next ui frame
         MUTEX_LOCK(mutexBuffers);
         bool post = false;
-        for (uint32_t i = 0; i < no_streams; i++)
+        for (uint32_t i = 0; i<no_streams; i++)
         {
             Stream& stream = streams[i];
             if (stream.isPlaying)
@@ -299,7 +299,7 @@ public:
     {
         // Running in Decoder thread!!
 
-        while (1)
+        while(1)
         {
             // Look for a stream to decode
             uint32_t stream_index = getStreamIndexToDecode();
@@ -378,13 +378,13 @@ private:
     {
     public:
         Stream() : frameCount(0), frameNumberNext(0), frameNumberShown(0), tickCount(0),
-            frame_rate_video(0), frame_rate_ticks(0),
-            seek_to_frame(0),
-            currentBuffer(0), nextBuffer(0), bufferA(0), bufferB(0),
-            isActive(false), isPlaying(false),
-            doDecodeNewFrame(false), cancelDecoding(false),
-            hasMoreFramesAfterNext(false), repeat(true)
-        {}
+                   frame_rate_video(0), frame_rate_ticks(0),
+                   seek_to_frame(0),
+                   currentBuffer(0), nextBuffer(0), bufferA(0), bufferB(0),
+                   isActive(false), isPlaying(false),
+                   doDecodeNewFrame(false), cancelDecoding(false),
+                   hasMoreFramesAfterNext(false), repeat(true)
+            {}
         uint32_t frameCount;         // Video frame count since play/speed change
         uint32_t frameNumberNext;    // Next Video frame number (if any)
         uint32_t frameNumberShown;   // Shown Video frame number
@@ -449,7 +449,7 @@ private:
 
     uint32_t getStreamIndexToDecode()
     {
-        for (uint32_t i = 0; i < no_streams; i++)
+        for (uint32_t i = 0; i<no_streams; i++)
         {
             Stream& stream = streams[i];
             if (stream.doDecodeNewFrame) // Marked by UI for decoding
