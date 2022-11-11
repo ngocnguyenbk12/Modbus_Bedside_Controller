@@ -19,6 +19,7 @@ public:
     virtual void AC_TempLow();
     virtual void AC_TempHigh();
     virtual void AC_TempMed();
+    virtual void AC_TempUpdate(uint16_t Value);
 
 protected:
     uint16_t Counter = 20;  

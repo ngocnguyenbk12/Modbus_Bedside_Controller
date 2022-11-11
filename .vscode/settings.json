@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "modbus_guihandler.h": "c",
+        "stm32746g_discovery_qspi.h": "c",
+        "std_return.h": "c",
+        "type_traits": "cpp"
+    }
+}

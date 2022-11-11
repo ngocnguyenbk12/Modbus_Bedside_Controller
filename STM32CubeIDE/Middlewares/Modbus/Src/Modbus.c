@@ -14,7 +14,7 @@
 #include "Modbus.h"
 #include "timers.h"
 #include "semphr.h"
-
+#include "Modbus_GuiHandler.h"
 
 
 
@@ -37,7 +37,7 @@
 #define highByte(w) ((w) >> 8)
 
 
-modbusHandler_t *mHandlers[MAX_M_HANDLERS];
+extern modbusHandler_t *mHandlers[MAX_M_HANDLERS];
 
 
 ///Queue Modbus telegrams for master
@@ -1804,6 +1804,10 @@ int8_t process_FC6(modbusHandler_t *modH )
     uint16_t u16val = word( modH->u8Buffer[ NB_HI ], modH->u8Buffer[ NB_LO ] );
 
     modH->u16regs[ u16add ] = u16val;
+
+/**	USR Call Modbus Create Queue	**/
+	Ac_TempQueueUpdate(u16val);
+
 
     // keep the same header
     modH->u8BufferSize = RESPONSE_SIZE;

@@ -27,6 +27,8 @@ public:
 
     virtual ~AC_VIEWPresenter() {};
 
+    void AC_Setnewvalue(uint16_t Value);
+
 private:
     AC_VIEWPresenter();
 

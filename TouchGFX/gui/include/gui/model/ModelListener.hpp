@@ -14,6 +14,9 @@ public:
     {
         model = m;
     }
+    
+    virtual void AC_Setnewvalue(unsigned short Value) {}
+
 protected:
     Model* model;
 };

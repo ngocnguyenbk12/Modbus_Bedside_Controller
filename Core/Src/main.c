@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
 #include "Modbus.h"
+#include "Std_Return.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -123,7 +124,8 @@ extern void videoTaskFunc(void *argument);
 /* USER CODE BEGIN 0 */
 /**------------------------ Variables ---------------------------**/
 modbusHandler_t ModbusH;
-uint16_t ModbusDATA[8];
+uint16_t ModbusDATA[50000];
+
 /* USER CODE END 0 */
 
 /**

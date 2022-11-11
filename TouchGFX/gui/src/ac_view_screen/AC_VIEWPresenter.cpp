@@ -16,3 +16,8 @@ void AC_VIEWPresenter::deactivate()
 {
 
 }
+
+void AC_VIEWPresenter::AC_Setnewvalue(uint16_t Value)
+{
+    view.AC_TempUpdate(Value);
+}   
