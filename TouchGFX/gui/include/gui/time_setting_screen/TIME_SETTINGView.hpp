@@ -1,0 +1,17 @@
+#ifndef TIME_SETTINGVIEW_HPP
+#define TIME_SETTINGVIEW_HPP
+
+#include <gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp>
+#include <gui/time_setting_screen/TIME_SETTINGPresenter.hpp>
+
+class TIME_SETTINGView : public TIME_SETTINGViewBase
+{
+public:
+    TIME_SETTINGView();
+    virtual ~TIME_SETTINGView() {}
+    virtual void setupScreen();
+    virtual void tearDownScreen();
+protected:
+};
+
+#endif // TIME_SETTINGVIEW_HPP

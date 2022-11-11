@@ -1,0 +1,629 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "MAIN_MENU",
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "tiledImage1",
+            "Width": 486,
+            "Height": 272,
+            "LockPosition": true,
+            "FileName": "__designer\\Blue_Textures_whitewall.png",
+            "Style": "Texture21"
+          },
+          {
+            "Type": "AnalogClock",
+            "Name": "analogClock1",
+            "X": 18,
+            "Y": 15,
+            "Width": 233,
+            "Height": 243,
+            "FileNameBackground": "__designer\\Blue_Clocks_Backgrounds_clock_standard_background.png",
+            "RotationCenterX": 116,
+            "RotationCenterY": 116,
+            "Style": "Style1",
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "ClockHands": [
+              {
+                "Type": "HourClockHand",
+                "FileNameHandImage": "__designer\\Blue_Clocks_Hands_clock_standard_hour_hand.png",
+                "RotationCenterX": 7,
+                "RotationCenterY": 52
+              },
+              {
+                "Type": "MinuteClockHand",
+                "FileNameHandImage": "__designer\\Blue_Clocks_Hands_clock_standard_minute_hand.png",
+                "RotationCenterX": 7,
+                "RotationCenterY": 67
+              },
+              {
+                "Type": "SecondClockHand",
+                "FileNameHandImage": "__designer\\Blue_Clocks_Hands_clock_standard_second_hand.png",
+                "RotationCenterX": 3,
+                "RotationCenterY": 66
+              }
+            ],
+            "InitialHour": 10,
+            "InitialMinute": 10
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "SETTING",
+            "X": 282,
+            "Y": 198,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_RDTD",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "LIGHT_BUTTON",
+            "X": 282,
+            "Y": 76,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_LSOD",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "SERVICE_BUTTON",
+            "X": 282,
+            "Y": 136,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_UW39",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "AC_BUTTON",
+            "X": 282,
+            "Y": 15,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_XA5L",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "MAIN_2_AC",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "AC_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "AC_VIEW"
+            }
+          },
+          {
+            "InteractionName": "MAIN_2_SERVICE",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SERVICE_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SERVICE_VIEW"
+            }
+          },
+          {
+            "InteractionName": "MAIN_2_LIGHT",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "LIGHT_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "LIGHT_VEW"
+            }
+          },
+          {
+            "InteractionName": "MAIN_2_SETTING",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SETTING"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SETTING_VIEW"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "AC_VIEW",
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "tiledImage1",
+            "Width": 480,
+            "Height": 272,
+            "FileName": "__designer\\Blue_Textures_whitewall.png",
+            "Style": "Texture21"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SWITCH",
+            "X": 22,
+            "Y": 17,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "HIGH",
+            "X": 1,
+            "Y": 92,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_PANZ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "MED",
+            "X": 1,
+            "Y": 152,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_79C5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "LOW",
+            "X": 1,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_0IZ2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "UP",
+            "X": 310,
+            "Y": 92,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_J95C",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "DOWN",
+            "X": 310,
+            "Y": 152,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_ERNJ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "BACK",
+            "X": 310,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_OAE4",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "TEMPERATURE",
+            "X": 218,
+            "Y": 17,
+            "Width": 239,
+            "Height": 53,
+            "TextId": "__SingleUse_N7WN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 219,
+              "Green": 59,
+              "Blue": 59
+            },
+            "Wildcard1": {}
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "AC_2_MAIN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BACK"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MAIN_MENU"
+            }
+          },
+          {
+            "InteractionName": "AC_DOWN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DOWN"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AC_TempDown"
+            }
+          },
+          {
+            "InteractionName": "AC_UP",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "UP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AC_TempUp"
+            }
+          },
+          {
+            "InteractionName": "AC_HIGH",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "LOW"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AC_TempHigh"
+            }
+          },
+          {
+            "InteractionName": "AC_LOW",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "MED"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AC_TempLow"
+            }
+          },
+          {
+            "InteractionName": "AC_MED",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "MED"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AC_TempMed"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "LIGHT_VEW",
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "tiledImage1",
+            "Width": 480,
+            "Height": 272,
+            "FileName": "__designer\\Blue_Textures_whitewall.png",
+            "Style": "Texture21"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "BED",
+            "X": 14,
+            "Y": 40,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_KX90",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "KITCHEN",
+            "X": 14,
+            "Y": 106,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_3303",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "BATH",
+            "X": 14,
+            "Y": 172,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_V0QR",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "BACK",
+            "X": 297,
+            "Y": 172,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_BYNC",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "LIGHT_2_MAIN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BACK"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MAIN_MENU"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SERVICE_VIEW",
+        "Components": [],
+        "Interactions": []
+      },
+      {
+        "Name": "SETTING_VIEW",
+        "Components": [],
+        "Interactions": []
+      },
+      {
+        "Name": "TIME_SETTING",
+        "Components": [],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "TouchGFX_v2_Rework",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "MAIN_MENU",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32F746G_DISCO.ioc --platform=m7",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7"
+  },
+  "Version": "4.18.1",
+  "CreatedBy": "4.18.1"
+}

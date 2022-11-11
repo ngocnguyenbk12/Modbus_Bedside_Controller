@@ -1,0 +1,13 @@
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+AC_VIEWViewBase.hpp:26:18:virtual void AC_VIEWViewBase::AC_TempDown()	0	static
+AC_VIEWViewBase.hpp:31:18:virtual void AC_VIEWViewBase::AC_TempUp()	0	static
+AC_VIEWViewBase.hpp:36:18:virtual void AC_VIEWViewBase::AC_TempHigh()	0	static
+AC_VIEWViewBase.hpp:41:18:virtual void AC_VIEWViewBase::AC_TempLow()	0	static
+AC_VIEWViewBase.hpp:46:18:virtual void AC_VIEWViewBase::AC_TempMed()	0	static
+AC_VIEWView.hpp:11:13:AC_VIEWView::~AC_VIEWView()	0	static
+AC_VIEWView.cpp:13:6:virtual void AC_VIEWView::tearDownScreen()	0	static
+AC_VIEWView.cpp:8:6:virtual void AC_VIEWView::setupScreen()	0	static
+AC_VIEWView.hpp:11:13:virtual AC_VIEWView::~AC_VIEWView()	8	static
+AC_VIEWView.cpp:3:1:AC_VIEWView::AC_VIEWView()	8	static
