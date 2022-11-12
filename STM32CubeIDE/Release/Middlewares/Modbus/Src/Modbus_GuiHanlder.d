@@ -52,7 +52,7 @@ Middlewares/Modbus/Src/Modbus_GuiHanlder.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
+ D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusConfig.h \
  D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
@@ -162,7 +162,7 @@ D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Usr_Type/Std_Re
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 
-D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
+D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusConfig.h:
 
 D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 

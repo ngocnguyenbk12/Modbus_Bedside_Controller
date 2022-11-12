@@ -1,13 +1,12 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
 
-#include "FreeRTOS.h"
-#include "queue.h"
-#include "task.h"
-
 
 extern "C"
 {
+    #include "FreeRTOS.h"
+    #include "queue.h"
+    #include "task.h"
    extern xQueueHandle    Q_Modbus2AC;
 }
 unsigned short Value ;

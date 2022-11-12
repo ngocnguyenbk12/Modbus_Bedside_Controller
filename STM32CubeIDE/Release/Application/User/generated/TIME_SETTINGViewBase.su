@@ -17,8 +17,20 @@ Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 View.hpp:36:7:touchgfx::View<TIME_SETTINGPresenter>::~View()	0	static
-TIME_SETTINGViewBase.hpp:16:13:TIME_SETTINGViewBase::~TIME_SETTINGViewBase()	0	static
-TIME_SETTINGViewBase.cpp:16:6:virtual void TIME_SETTINGViewBase::setupScreen()	0	static
+TIME_SETTINGViewBase.hpp:19:13:TIME_SETTINGViewBase::~TIME_SETTINGViewBase()	0	static
+TIME_SETTINGViewBase.hpp:25:18:virtual void TIME_SETTINGViewBase::Time_Down()	0	static
+TIME_SETTINGViewBase.hpp:30:18:virtual void TIME_SETTINGViewBase::Time_Left()	0	static
+TIME_SETTINGViewBase.hpp:35:18:virtual void TIME_SETTINGViewBase::Time_Up()	0	static
+TIME_SETTINGViewBase.hpp:40:18:virtual void TIME_SETTINGViewBase::Time_Right()	0	static
+TIME_SETTINGViewBase.cpp:74:6:virtual void TIME_SETTINGViewBase::setupScreen()	0	static
+Callback.hpp:357:8:touchgfx::Callback<TIME_SETTINGViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = TIME_SETTINGViewBase; T1 = const touchgfx::AbstractButton&]	8	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = TIME_SETTINGViewBase; T1 = const touchgfx::AbstractButton&]	0	static
+Callback.hpp:357:8:virtual touchgfx::Callback<TIME_SETTINGViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 View.hpp:36:7:virtual touchgfx::View<TIME_SETTINGPresenter>::~View()	8	static
-TIME_SETTINGViewBase.hpp:16:13:virtual TIME_SETTINGViewBase::~TIME_SETTINGViewBase()	8	static
-TIME_SETTINGViewBase.cpp:7:1:TIME_SETTINGViewBase::TIME_SETTINGViewBase()	16	static
+TIME_SETTINGViewBase.hpp:19:13:virtual TIME_SETTINGViewBase::~TIME_SETTINGViewBase()	8	static
+TIME_SETTINGViewBase.cpp:79:6:void TIME_SETTINGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
+ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
+TIME_SETTINGViewBase.cpp:9:1:TIME_SETTINGViewBase::TIME_SETTINGViewBase()	80	static

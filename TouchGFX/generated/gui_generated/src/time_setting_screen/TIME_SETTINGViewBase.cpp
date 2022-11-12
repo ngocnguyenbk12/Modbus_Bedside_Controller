@@ -3,17 +3,114 @@
 /*********************************************************************************/
 #include <gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-TIME_SETTINGViewBase::TIME_SETTINGViewBase()
+TIME_SETTINGViewBase::TIME_SETTINGViewBase() :
+    buttonCallback(this, &TIME_SETTINGViewBase::buttonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
+    tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_TEXTURES_WHITEWALL_ID));
+    tiledImage1.setPosition(0, 0, 480, 272);
+    tiledImage1.setOffset(0, 0);
+
+    TIME_CLOCK.setXY(13, 15);
+    TIME_CLOCK.setBackground(BITMAP_BLUE_CLOCKS_BACKGROUNDS_CLOCK_STANDARD_BACKGROUND_ID, 116, 116);
+    TIME_CLOCK.setupSecondHand(BITMAP_BLUE_CLOCKS_HANDS_CLOCK_STANDARD_SECOND_HAND_ID, 3, 66);
+    TIME_CLOCK.setupMinuteHand(BITMAP_BLUE_CLOCKS_HANDS_CLOCK_STANDARD_MINUTE_HAND_ID, 7, 67);
+    TIME_CLOCK.setMinuteHandSecondCorrection(false);
+    TIME_CLOCK.setupHourHand(BITMAP_BLUE_CLOCKS_HANDS_CLOCK_STANDARD_HOUR_HAND_ID, 7, 52);
+    TIME_CLOCK.setHourHandMinuteCorrection(false);
+    TIME_CLOCK.initializeTime24Hour(10, 10, 0);
+
+    TIME_UP.setXY(313, 15);
+    TIME_UP.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    TIME_UP.setLabelText(touchgfx::TypedText(T___SINGLEUSE_1T9M));
+    TIME_UP.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_UP.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_UP.setAction(buttonCallback);
+
+    TIME_RIGHT.setXY(373, 75);
+    TIME_RIGHT.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    TIME_RIGHT.setLabelText(touchgfx::TypedText(T___SINGLEUSE_QHS0));
+    TIME_RIGHT.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_RIGHT.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_RIGHT.setAction(buttonCallback);
+
+    TIME_LEFT.setXY(253, 75);
+    TIME_LEFT.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    TIME_LEFT.setLabelText(touchgfx::TypedText(T___SINGLEUSE_8HDA));
+    TIME_LEFT.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_LEFT.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_LEFT.setAction(buttonCallback);
+
+    TIME_DOWN.setXY(313, 135);
+    TIME_DOWN.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    TIME_DOWN.setLabelText(touchgfx::TypedText(T___SINGLEUSE_0TH8));
+    TIME_DOWN.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_DOWN.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_DOWN.setAction(buttonCallback);
+
+    TIME_BACK.setXY(304, 205);
+    TIME_BACK.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    TIME_BACK.setLabelText(touchgfx::TypedText(T___SINGLEUSE_SQTK));
+    TIME_BACK.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_BACK.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    TIME_BACK.setAction(buttonCallback);
+
     add(__background);
+    add(tiledImage1);
+    add(TIME_CLOCK);
+    add(TIME_UP);
+    add(TIME_RIGHT);
+    add(TIME_LEFT);
+    add(TIME_DOWN);
+    add(TIME_BACK);
 }
 
 void TIME_SETTINGViewBase::setupScreen()
 {
 
+}
+
+void TIME_SETTINGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &TIME_UP)
+    {
+        //TIME_UP
+        //When TIME_UP clicked call virtual function
+        //Call Time_Up
+        Time_Up();
+    }
+    else if (&src == &TIME_RIGHT)
+    {
+        //TIME_RIGHT
+        //When TIME_RIGHT clicked call virtual function
+        //Call Time_Right
+        Time_Right();
+    }
+    else if (&src == &TIME_LEFT)
+    {
+        //TIME_LEFT
+        //When TIME_LEFT clicked call virtual function
+        //Call Time_Left
+        Time_Left();
+    }
+    else if (&src == &TIME_DOWN)
+    {
+        //TIME_DOWN
+        //When TIME_DOWN clicked call virtual function
+        //Call Time_Down
+        Time_Down();
+    }
+    else if (&src == &TIME_BACK)
+    {
+        //TIME_2_MAIN
+        //When TIME_BACK clicked change screen to MAIN_MENU
+        //Go to MAIN_MENU with no screen transition
+        application().gotoMAIN_MENUScreenNoTransition();
+    }
 }

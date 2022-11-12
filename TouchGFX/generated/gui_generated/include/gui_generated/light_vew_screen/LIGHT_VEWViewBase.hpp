@@ -10,6 +10,8 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class LIGHT_VEWViewBase : public touchgfx::View<LIGHT_VEWPresenter>
 {
@@ -17,6 +19,24 @@ public:
     LIGHT_VEWViewBase();
     virtual ~LIGHT_VEWViewBase() {}
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void Light_SwitchToggle_1()
+    {
+        // Override and implement this function in LIGHT_VEW
+    }
+
+    virtual void Light_SwitchToggle_0()
+    {
+        // Override and implement this function in LIGHT_VEW
+    }
+
+    virtual void Light_SwitchToggle_2()
+    {
+        // Override and implement this function in LIGHT_VEW
+    }
 
 protected:
     FrontendApplication& application() {
@@ -28,10 +48,13 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::TiledImage tiledImage1;
-    touchgfx::ButtonWithLabel BED;
-    touchgfx::ButtonWithLabel KITCHEN;
-    touchgfx::ButtonWithLabel BATH;
     touchgfx::ButtonWithLabel BACK;
+    touchgfx::ToggleButton LIGHT_SWITCH_0;
+    touchgfx::ToggleButton LIGHT_SWITCH_2;
+    touchgfx::ToggleButton LIGHT_SWITCH_1;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextArea textArea1_1;
+    touchgfx::TextArea textArea1_2;
 
 private:
 

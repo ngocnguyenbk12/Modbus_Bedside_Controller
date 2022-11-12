@@ -49,7 +49,9 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/gui/src/light_vew_screen/LIGHT_VEWPresen
  Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
 
 TouchGFX/gui/include/gui/light_vew_screen/LIGHT_VEWView.hpp:
 
@@ -150,3 +152,7 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:

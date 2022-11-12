@@ -57,7 +57,7 @@ Application/User/Core/main.o: \
  ../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h \
  ../../Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h \
  D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
+ D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
@@ -181,7 +181,7 @@ Application/User/Core/main.o: \
 
 D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 
-D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
+D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusConfig.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 

@@ -3,11 +3,12 @@
 extern "C"
 {
 	#include "Modbus_GuiHandler.h"
+	static int AC_onoff_state  = 0;
+	static uint8_t Temperature = 20;
 }
 
 
-static int AC_onoff_state  = 0;
-static uint8_t Temperature = 20;
+
 
 
 AC_VIEWView::AC_VIEWView()

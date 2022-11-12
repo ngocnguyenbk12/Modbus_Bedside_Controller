@@ -42,7 +42,19 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/gui/src/time_setting_screen/TIME_SETTING
  TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGPresenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AnalogClock.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 
 TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGView.hpp:
 
@@ -129,3 +141,27 @@ TouchGFX/gui/include/gui/model/ModelListener.hpp:
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AnalogClock.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:

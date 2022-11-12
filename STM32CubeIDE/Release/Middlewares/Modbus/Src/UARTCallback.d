@@ -51,7 +51,7 @@ Middlewares/Modbus/Src/UARTCallback.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
+ D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
@@ -158,7 +158,7 @@ Middlewares/Modbus/Src/UARTCallback.o: \
 
 D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 
-D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
+D:/LV_Modbus/Project/TouchGFX_v2_Rework/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusConfig.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 

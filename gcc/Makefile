@@ -23,6 +23,19 @@ makefile_path_relative := $(subst $(call sq,$(application_path))/,,$(call sq,$(a
 touchgfx_middlewares_path := gcc/Middlewares
 cubemx_middlewares_path := Middlewares
 
+
+
+# USR include path
+usr_include_paths := \
+	STM32CubeIDE/Middlewares/Usr_Type \
+	STM32CubeIDE/Middlewares/Modbus/Inc
+usr_source_file := 	\
+	STM32CubeIDE/Middlewares/Modbus/Src/Modbus.c \
+	STM32CubeIDE/Middlewares/Modbus/Src/UARTCallback.c \
+	STM32CubeIDE/Middlewares/Modbus/Src/Modbus_GuiHanlder.c
+
+
+
 # Get path to Drivers
 Drivers_path := Drivers
 
@@ -84,6 +97,7 @@ asset_fonts_output := $(asset_root_path)/fonts
 asset_texts_output := $(asset_root_path)/texts
 asset_videos_output := $(asset_root_path)/videos
 
+	
 #include application specific configuration
 include $(application_path)/TouchGFX/config/gcc/app.mk
 
@@ -186,6 +200,7 @@ all_components := $(components) \
 
 #keep framework include and source out of this mess! :)
 include_paths := $(library_includes) \
+	$(usr_include_paths) \
     $(foreach comp, $(all_components), $(comp)/include) \
     $(foreach comp, $(cubemx_components), $(comp)/Inc) \
     $(foreach comp, $(touchgfx_generator_components), $(comp)/generated) \
@@ -274,15 +289,16 @@ board_include_paths := \
     Drivers/BSP/Components/ft5336 \
     Drivers/BSP/STM32746G-Discovery
 
+
 asm_source_files := $(makefile_path_relative)/startup_stm32f746nghx.s
 
 c_compiler_options +=
 cpp_compiler_options +=
 
-include_paths += platform/os $(board_include_paths) $(os_include_paths)
+include_paths += platform/os $(board_include_paths) $(os_include_paths) $(usr_include_paths)
 
 
-c_source_files := $(call find, $(source_paths),*.c) $(os_source_files) $(board_c_files)
+c_source_files := $(call find, $(source_paths),*.c) $(os_source_files) $(board_c_files) $(usr_source_file)
 source_files += $(board_cpp_files)
 
 libjpeg_source_path = Middlewares/Third_Party/LibJPEG/source
@@ -309,7 +325,7 @@ videoconvert_script_path := $(touchgfx_path)/framework/tools/videoconvert
 text_database := $(asset_texts_input)/texts.xml
 
 libraries := touchgfx
-library_include_paths := $(touchgfx_path)/lib/core/$(platform)/gcc
+library_include_paths := $(touchgfx_path)/lib/core/$(platform)/gcc	$(usr_include_paths)
 
 .PHONY: _all_ _clean_ _assets_ _flash_ _intflash_ generate_assets build_executable
 
@@ -397,7 +413,7 @@ $(object_output_path)/%.o: %.s TouchGFX/config/gcc/app.mk
 	@mkdir -p $(@D)
 	@$(assembler) \
 		$(assembler_options) \
-		$(patsubst %,-I %,$(os_include_paths)) \
+		$(patsubst %,-I %,$(os_include_paths) $(usr_include_paths)) \
 		-c $< -o $@
 
 ifeq ($(MAKECMDGOALS),build_executable)

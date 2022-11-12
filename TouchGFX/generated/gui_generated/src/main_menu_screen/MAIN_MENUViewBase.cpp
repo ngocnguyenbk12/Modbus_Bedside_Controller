@@ -73,9 +73,9 @@ void MAIN_MENUViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& sr
     if (&src == &SETTING)
     {
         //MAIN_2_SETTING
-        //When SETTING clicked change screen to SETTING_VIEW
-        //Go to SETTING_VIEW with no screen transition
-        application().gotoSETTING_VIEWScreenNoTransition();
+        //When SETTING clicked change screen to TIME_SETTING
+        //Go to TIME_SETTING with no screen transition
+        application().gotoTIME_SETTINGScreenNoTransition();
     }
     else if (&src == &LIGHT_BUTTON)
     {

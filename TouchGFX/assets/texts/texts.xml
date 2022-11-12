@@ -31,15 +31,6 @@
     <Text Id="__SingleUse_OAE4" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
-    <Text Id="__SingleUse_KX90" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">BED</Translation>
-    </Text>
-    <Text Id="__SingleUse_3303" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">KITCHEN</Translation>
-    </Text>
-    <Text Id="__SingleUse_V0QR" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">BATH</Translation>
-    </Text>
     <Text Id="__SingleUse_BYNC" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
@@ -48,6 +39,30 @@
     </Text>
     <Text Id="__SingleUse_TPZ4" TypographyId="Temperature_Value" Alignment="Left" Direction="LTR">
       <Translation Language="GB">0</Translation>
+    </Text>
+    <Text Id="__SingleUse_TQ6D" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Device 0:</Translation>
+    </Text>
+    <Text Id="__SingleUse_AZ90" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Device 1:</Translation>
+    </Text>
+    <Text Id="__SingleUse_YHZS" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Device 2:</Translation>
+    </Text>
+    <Text Id="__SingleUse_1T9M" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">UP</Translation>
+    </Text>
+    <Text Id="__SingleUse_QHS0" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">RIGHT</Translation>
+    </Text>
+    <Text Id="__SingleUse_8HDA" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">LEFT</Translation>
+    </Text>
+    <Text Id="__SingleUse_0TH8" TypographyId="Small" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">DOWN</Translation>
+    </Text>
+    <Text Id="__SingleUse_SQTK" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">BACK</Translation>
     </Text>
   </Texts>
   <Typographies>

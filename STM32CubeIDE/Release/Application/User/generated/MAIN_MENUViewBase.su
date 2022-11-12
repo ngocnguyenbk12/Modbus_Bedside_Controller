@@ -29,4 +29,4 @@ MAIN_MENUViewBase.cpp:71:6:void MAIN_MENUViewBase::buttonCallbackHandler(const t
 Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
-MAIN_MENUViewBase.cpp:9:1:MAIN_MENUViewBase::MAIN_MENUViewBase()	64	static
+MAIN_MENUViewBase.cpp:9:1:MAIN_MENUViewBase::MAIN_MENUViewBase()	72	static

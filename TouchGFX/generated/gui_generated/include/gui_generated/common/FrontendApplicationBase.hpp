@@ -27,8 +27,8 @@ public:
     // SERVICE_VIEW
     void gotoSERVICE_VIEWScreenNoTransition();
 
-    // SETTING_VIEW
-    void gotoSETTING_VIEWScreenNoTransition();
+    // TIME_SETTING
+    void gotoTIME_SETTINGScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -47,8 +47,8 @@ protected:
     // SERVICE_VIEW
     void gotoSERVICE_VIEWScreenNoTransitionImpl();
 
-    // SETTING_VIEW
-    void gotoSETTING_VIEWScreenNoTransitionImpl();
+    // TIME_SETTING
+    void gotoTIME_SETTINGScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -17,37 +17,49 @@ LIGHT_VEWViewBase::LIGHT_VEWViewBase() :
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
 
-    BED.setXY(14, 40);
-    BED.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    BED.setLabelText(touchgfx::TypedText(T___SINGLEUSE_KX90));
-    BED.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    BED.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-
-    KITCHEN.setXY(14, 106);
-    KITCHEN.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    KITCHEN.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3303));
-    KITCHEN.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    KITCHEN.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-
-    BATH.setXY(14, 172);
-    BATH.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    BATH.setLabelText(touchgfx::TypedText(T___SINGLEUSE_V0QR));
-    BATH.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    BATH.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-
-    BACK.setXY(297, 172);
+    BACK.setXY(310, 212);
     BACK.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     BACK.setLabelText(touchgfx::TypedText(T___SINGLEUSE_BYNC));
     BACK.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     BACK.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     BACK.setAction(buttonCallback);
 
+    LIGHT_SWITCH_0.setXY(331, 25);
+    LIGHT_SWITCH_0.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    LIGHT_SWITCH_0.setAction(buttonCallback);
+
+    LIGHT_SWITCH_2.setXY(331, 130);
+    LIGHT_SWITCH_2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    LIGHT_SWITCH_2.setAction(buttonCallback);
+
+    LIGHT_SWITCH_1.setXY(331, 77);
+    LIGHT_SWITCH_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    LIGHT_SWITCH_1.setAction(buttonCallback);
+
+    textArea1.setXY(183, 32);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TQ6D));
+
+    textArea1_1.setXY(183, 84);
+    textArea1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_1.setLinespacing(0);
+    textArea1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AZ90));
+
+    textArea1_2.setXY(183, 137);
+    textArea1_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_2.setLinespacing(0);
+    textArea1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YHZS));
+
     add(__background);
     add(tiledImage1);
-    add(BED);
-    add(KITCHEN);
-    add(BATH);
     add(BACK);
+    add(LIGHT_SWITCH_0);
+    add(LIGHT_SWITCH_2);
+    add(LIGHT_SWITCH_1);
+    add(textArea1);
+    add(textArea1_1);
+    add(textArea1_2);
 }
 
 void LIGHT_VEWViewBase::setupScreen()
@@ -63,5 +75,26 @@ void LIGHT_VEWViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& sr
         //When BACK clicked change screen to MAIN_MENU
         //Go to MAIN_MENU with no screen transition
         application().gotoMAIN_MENUScreenNoTransition();
+    }
+    else if (&src == &LIGHT_SWITCH_0)
+    {
+        //LIGHT_SWITCH_0_ACTION
+        //When LIGHT_SWITCH_0 clicked call virtual function
+        //Call Light_SwitchToggle_0
+        Light_SwitchToggle_0();
+    }
+    else if (&src == &LIGHT_SWITCH_2)
+    {
+        //LIGHT_SWITCH_2_ACTION
+        //When LIGHT_SWITCH_2 clicked call virtual function
+        //Call Light_SwitchToggle_2
+        Light_SwitchToggle_2();
+    }
+    else if (&src == &LIGHT_SWITCH_1)
+    {
+        //LIGHT_SWITCH_1_ACTION
+        //When LIGHT_SWITCH_1 clicked call virtual function
+        //Call Light_SwitchToggle_1
+        Light_SwitchToggle_1();
     }
 }
