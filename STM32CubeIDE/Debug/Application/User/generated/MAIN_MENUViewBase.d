@@ -1,5 +1,5 @@
 Application/User/generated/MAIN_MENUViewBase.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/TouchGFX/generated/gui_generated/src/main_menu_screen/MAIN_MENUViewBase.cpp \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/generated/gui_generated/src/main_menu_screen/MAIN_MENUViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/main_menu_screen/MAIN_MENUViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

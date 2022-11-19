@@ -91,15 +91,15 @@ void FrontendApplicationBase::gotoSERVICE_VIEWScreenNoTransitionImpl()
     touchgfx::makeTransition<SERVICE_VIEWView, SERVICE_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// SETTING_VIEW
+// TIME_SETTING
 
-void FrontendApplicationBase::gotoSETTING_VIEWScreenNoTransition()
+void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSETTING_VIEWScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoTIME_SETTINGScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoSETTING_VIEWScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<SETTING_VIEWView, SETTING_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<TIME_SETTINGView, TIME_SETTINGPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

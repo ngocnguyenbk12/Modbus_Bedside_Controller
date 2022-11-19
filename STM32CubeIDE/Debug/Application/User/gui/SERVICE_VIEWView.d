@@ -1,5 +1,5 @@
 Application/User/gui/SERVICE_VIEWView.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/TouchGFX/gui/src/service_view_screen/SERVICE_VIEWView.cpp \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/gui/src/service_view_screen/SERVICE_VIEWView.cpp \
  ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/service_view_screen/SERVICE_VIEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

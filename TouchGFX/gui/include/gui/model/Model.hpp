@@ -14,6 +14,8 @@ public:
     }
 
     void tick();
+    virtual void TestAction();
+   
 protected:
     ModelListener* modelListener;
 };

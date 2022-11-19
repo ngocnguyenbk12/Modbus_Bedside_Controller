@@ -27,6 +27,7 @@ public:
 
     virtual ~TIME_SETTINGPresenter() {};
 
+    virtual void Test_Action();
 private:
     TIME_SETTINGPresenter();
 

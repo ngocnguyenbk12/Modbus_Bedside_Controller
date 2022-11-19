@@ -11,6 +11,8 @@ public:
     virtual ~TIME_SETTINGView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    
+    virtual void Time_UpButton();
 protected:
 };
 

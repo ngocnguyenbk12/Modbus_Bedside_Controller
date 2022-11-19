@@ -1,5 +1,5 @@
 Middlewares/LibJPEG/jmemnobs.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/Middlewares/Third_Party/LibJPEG/source/jmemnobs.c \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Middlewares/Third_Party/LibJPEG/source/jmemnobs.c \
  ../../Middlewares/Third_Party/LibJPEG/include/jinclude.h \
  ../../LIBJPEG/Target/jconfig.h ../../LIBJPEG/Target/jdata_conf.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \

@@ -8,6 +8,10 @@
 #include <mvp/View.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TiledImage.hpp>
+#include <touchgfx/containers/clock/AnalogClock.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class TIME_SETTINGViewBase : public touchgfx::View<TIME_SETTINGPresenter>
 {
@@ -16,13 +20,57 @@ public:
     virtual ~TIME_SETTINGViewBase() {}
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void Time_UpButton()
+    {
+        // Override and implement this function in TIME_SETTING
+    }
+
+    virtual void Time_DownButton()
+    {
+        // Override and implement this function in TIME_SETTING
+    }
+
+    virtual void Time_LeftButton()
+    {
+        // Override and implement this function in TIME_SETTING
+    }
+
+    virtual void Time_RightButton()
+    {
+        // Override and implement this function in TIME_SETTING
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
     }
+
+    /*
+     * Member Declarations
+     */
     touchgfx::Box __background;
+    touchgfx::TiledImage tiledImage1;
+    touchgfx::AnalogClock analogClock1;
+    touchgfx::Button UP;
+    touchgfx::Button RIGHT;
+    touchgfx::Button LEFT;
+    touchgfx::Button DOWN;
+    touchgfx::ButtonWithLabel BACK;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<TIME_SETTINGViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

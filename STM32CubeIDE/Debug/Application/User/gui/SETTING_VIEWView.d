@@ -1,5 +1,5 @@
 Application/User/gui/SETTING_VIEWView.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/TouchGFX/gui/src/setting_view_screen/SETTING_VIEWView.cpp \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/gui/src/setting_view_screen/SETTING_VIEWView.cpp \
  ../../TouchGFX/gui/include/gui/setting_view_screen/SETTING_VIEWView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/setting_view_screen/SETTING_VIEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

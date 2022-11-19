@@ -1,5 +1,5 @@
 Application/User/gui/LIGHT_VEWPresenter.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/TouchGFX/gui/src/light_vew_screen/LIGHT_VEWPresenter.cpp \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/gui/src/light_vew_screen/LIGHT_VEWPresenter.cpp \
  ../../TouchGFX/gui/include/gui/light_vew_screen/LIGHT_VEWView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/light_vew_screen/LIGHT_VEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

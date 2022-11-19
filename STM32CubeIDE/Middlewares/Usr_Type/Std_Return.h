@@ -15,5 +15,5 @@
 typedef enum
 {
     E_OK   = 0,
-    E_NOT_OK 
-}Std_Return;
+    E_NOT_OK
+}Std_Return ;

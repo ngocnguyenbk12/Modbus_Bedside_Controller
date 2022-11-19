@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/croutine.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

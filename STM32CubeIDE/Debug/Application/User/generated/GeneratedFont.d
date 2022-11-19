@@ -1,5 +1,5 @@
 Application/User/generated/GeneratedFont.o: \
- D:/LV_Modbus/Project/TouchGFX_v2_Rework/TouchGFX/generated/fonts/src/GeneratedFont.cpp \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/generated/fonts/src/GeneratedFont.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

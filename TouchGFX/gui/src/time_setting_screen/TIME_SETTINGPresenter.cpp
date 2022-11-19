@@ -16,3 +16,8 @@ void TIME_SETTINGPresenter::deactivate()
 {
 
 }
+
+void TIME_SETTINGPresenter::Test_Action()
+{
+    model->TestAction();
+}

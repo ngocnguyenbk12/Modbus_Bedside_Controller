@@ -54,7 +54,7 @@ void AC_VIEWView::AC_TempUp(){
 			Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
 			TEMPERATURE.invalidate();
 		}
-		Ac_TempUpdate(0,AC_UP);
+		Ac_TempUpdate(Temperature,AC_UP);
 	}
 }
 
@@ -72,7 +72,7 @@ void AC_VIEWView::AC_TempDown()
 			Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
 			TEMPERATURE.invalidate();
 		}
-		Ac_TempUpdate(0,AC_DOWN);
+		Ac_TempUpdate(Temperature,AC_DOWN);
 	}
 }
 
@@ -83,7 +83,7 @@ void AC_VIEWView::AC_setonoff(){
         Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
         TEMPERATURE.invalidate();
         AC_onoff_state = 1;
-		Ac_TempUpdate(0,AC_ON);
+		Ac_TempUpdate(Temperature,AC_ON);
     }
     else
     {
@@ -91,7 +91,7 @@ void AC_VIEWView::AC_setonoff(){
     	Temperature = 00;
         Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
     	TEMPERATURE.invalidate();
-		Ac_TempUpdate(0,AC_STOP);
+		Ac_TempUpdate(Temperature,AC_STOP);
     }
 }
 
@@ -101,7 +101,7 @@ void AC_VIEWView::AC_TempLow(){
 	Counter--;
     Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
 	TEMPERATURE.invalidate();
-	Ac_TempUpdate(0,AC_SETLOW);
+	Ac_TempUpdate(Temperature,AC_SETLOW);
 	}
 }
 
@@ -110,7 +110,7 @@ void AC_VIEWView::AC_TempMed(){
 	Temperature = 22;
     Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
 	TEMPERATURE.invalidate();
-	Ac_TempUpdate(0,AC_SETMED);
+	Ac_TempUpdate(Temperature,AC_SETMED);
 	}
 }
 
@@ -120,6 +120,6 @@ void AC_VIEWView::AC_TempHigh(){
 	Counter++;
     Unicode::snprintf(TEMPERATUREBuffer, TEMPERATURE_SIZE, "%u", Temperature);
 	TEMPERATURE.invalidate();
-	Ac_TempUpdate(0,AC_SETHIGH);
+	Ac_TempUpdate(Temperature,AC_SETHIGH);
 	}
 }

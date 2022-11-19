@@ -188,7 +188,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "SETTING_VIEW"
+              "ActionComponent": "TIME_SETTING"
             }
           }
         ]
@@ -586,8 +586,177 @@
       },
       {
         "Name": "TIME_SETTING",
-        "Components": [],
-        "Interactions": []
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "tiledImage1",
+            "Width": 480,
+            "Height": 272,
+            "FileName": "__designer\\Blue_Textures_whitewall.png",
+            "Style": "Texture21"
+          },
+          {
+            "Type": "AnalogClock",
+            "Name": "analogClock1",
+            "X": 7,
+            "Y": 15,
+            "Width": 233,
+            "Height": 243,
+            "FileNameBackground": "__designer\\Blue_Clocks_Backgrounds_clock_standard_background.png",
+            "RotationCenterX": 116,
+            "RotationCenterY": 116,
+            "Style": "Style1",
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "ClockHands": [
+              {
+                "Type": "HourClockHand",
+                "FileNameHandImage": "__designer\\Blue_Clocks_Hands_clock_standard_hour_hand.png",
+                "RotationCenterX": 7,
+                "RotationCenterY": 52
+              },
+              {
+                "Type": "MinuteClockHand",
+                "FileNameHandImage": "__designer\\Blue_Clocks_Hands_clock_standard_minute_hand.png",
+                "RotationCenterX": 7,
+                "RotationCenterY": 67
+              },
+              {
+                "Type": "SecondClockHand",
+                "FileNameHandImage": "__designer\\Blue_Clocks_Hands_clock_standard_second_hand.png",
+                "RotationCenterX": 3,
+                "RotationCenterY": 66
+              }
+            ],
+            "InitialHour": 10,
+            "InitialMinute": 10
+          },
+          {
+            "Type": "Button",
+            "Name": "UP",
+            "X": 314,
+            "Y": 38,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "Button",
+            "Name": "RIGHT",
+            "X": 364,
+            "Y": 88,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "Button",
+            "Name": "LEFT",
+            "X": 266,
+            "Y": 88,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "Button",
+            "Name": "DOWN",
+            "X": 314,
+            "Y": 136,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "BACK",
+            "X": 310,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_3WOS",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "TIME_UP",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "UP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Time_UpButton"
+            }
+          },
+          {
+            "InteractionName": "TIME_DOWN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DOWN"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Time_DownButton"
+            }
+          },
+          {
+            "InteractionName": "TIME_LEFT",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "LEFT"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Time_LeftButton"
+            }
+          },
+          {
+            "InteractionName": "TIME_RIGHT",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "RIGHT"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Time_RightButton"
+            }
+          },
+          {
+            "InteractionName": "TIME2MAIN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BACK"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MAIN_MENU"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],

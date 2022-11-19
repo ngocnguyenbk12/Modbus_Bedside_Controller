@@ -2,7 +2,7 @@
 #define MODELLISTENER_HPP
 
 #include <gui/model/Model.hpp>
-
+#include "touchgfx/hal/Types.hpp"
 class ModelListener
 {
 public:
@@ -16,6 +16,7 @@ public:
     }
     
     virtual void AC_Setnewvalue(unsigned short Value) {}
+    virtual void RTC_UpdateTime(uint8_t hour, uint8_t minute, uint8_t second) {}
 
 protected:
     Model* model;

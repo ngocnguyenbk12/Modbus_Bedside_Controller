@@ -18,7 +18,8 @@
 #include "queue.h"
 #include "timers.h"
 
-
+#define MODBUS_SLAVE_DEVICE_MAX         8
+ 
 typedef enum
 {
     USART_HW = 1,
@@ -163,6 +164,14 @@ tcpclients_t;
 
 #endif
 
+typedef struct 
+{
+    uint16_t Addr;
+    uint16_t  Value;
+    bool    bValue;
+}DeviceType;
+
+
 
 /**
  * @struct modbusHandler_t
@@ -206,6 +215,8 @@ typedef struct
 	modbusRingBuffer_t xBufferRX;
 	// type of hardware  TCP, USB CDC, USART
 	mb_hardware_t xTypeHW;
+
+    DeviceType *Device;
 
 #if ENABLE_TCP == 1
 

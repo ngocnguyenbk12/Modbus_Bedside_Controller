@@ -21,7 +21,7 @@ FrontendApplicationBase.cpp:44:6:void FrontendApplicationBase::gotoMAIN_MENUScre
 FrontendApplicationBase.cpp:57:6:void FrontendApplicationBase::gotoAC_VIEWScreenNoTransition()	0	static
 FrontendApplicationBase.cpp:70:6:void FrontendApplicationBase::gotoLIGHT_VEWScreenNoTransition()	0	static
 FrontendApplicationBase.cpp:83:6:void FrontendApplicationBase::gotoSERVICE_VIEWScreenNoTransition()	0	static
-FrontendApplicationBase.cpp:96:6:void FrontendApplicationBase::gotoSETTING_VIEWScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:96:6:void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransition()	0	static
 AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	0	static
 MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MAIN_MENUView; PresenterType = MAIN_MENUPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
 FrontendApplicationBase.cpp:50:6:void FrontendApplicationBase::gotoMAIN_MENUScreenNoTransitionImpl()	16	static
@@ -31,5 +31,5 @@ MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Scre
 FrontendApplicationBase.cpp:76:6:void FrontendApplicationBase::gotoLIGHT_VEWScreenNoTransitionImpl()	16	static
 MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SERVICE_VIEWView; PresenterType = SERVICE_VIEWPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
 FrontendApplicationBase.cpp:89:6:void FrontendApplicationBase::gotoSERVICE_VIEWScreenNoTransitionImpl()	16	static
-MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SETTING_VIEWView; PresenterType = SETTING_VIEWPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
-FrontendApplicationBase.cpp:102:6:void FrontendApplicationBase::gotoSETTING_VIEWScreenNoTransitionImpl()	16	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = TIME_SETTINGView; PresenterType = TIME_SETTINGPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
+FrontendApplicationBase.cpp:102:6:void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransitionImpl()	16	static

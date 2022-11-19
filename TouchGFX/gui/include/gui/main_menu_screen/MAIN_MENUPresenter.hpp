@@ -27,6 +27,8 @@ public:
 
     virtual ~MAIN_MENUPresenter() {};
 
+    void RTC_UpdateTime(uint8_t hour, uint8_t minute, uint8_t second);
+    
 private:
     MAIN_MENUPresenter();
 

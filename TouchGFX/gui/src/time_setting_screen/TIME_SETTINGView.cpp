@@ -14,3 +14,8 @@ void TIME_SETTINGView::tearDownScreen()
 {
     TIME_SETTINGViewBase::tearDownScreen();
 }
+
+void TIME_SETTINGView::Time_UpButton()
+{
+    presenter->Test_Action();
+}

@@ -3,6 +3,16 @@
         "modbus_guihandler.h": "c",
         "stm32746g_discovery_qspi.h": "c",
         "std_return.h": "c",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "stm32f7xx_hal_def.h": "c",
+        "modbusconfig.h": "c",
+        "modbus.h": "c",
+        "freertos.h": "c",
+        "modbus_init.h": "c",
+        "modbus_master.h": "c",
+        "inttypes.h": "c",
+        "device_trace.h": "c",
+        "main.h": "c",
+        "modbus_cfg.h": "c"
     }
 }

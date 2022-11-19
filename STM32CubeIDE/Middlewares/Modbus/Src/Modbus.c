@@ -16,6 +16,10 @@
 #include "semphr.h"
 #include "Modbus_GuiHandler.h"
 
+#include "Device_Trace.h"
+#include "Modbus_Cfg.h"
+
+
 
 
 #if ENABLE_TCP == 1
@@ -38,6 +42,7 @@
 
 
 extern modbusHandler_t *mHandlers[MAX_M_HANDLERS];
+extern modbusHandler_t *MastermHandler[MAX_M_HANDLERS];
 
 
 ///Queue Modbus telegrams for master
@@ -1199,6 +1204,7 @@ void get_FC1(modbusHandler_t *modH)
         if(i%2)
         {
         	modH->u16regs[i/2]= word(modH->u8Buffer[i+u8byte], lowByte(modH->u16regs[i/2]));
+			//modH->Device[]
         }
         else
         {
@@ -1701,10 +1707,14 @@ int8_t process_FC1(modbusHandler_t *modH )
         u16currentRegister =  (u16coil / 16);
         u8currentBit = (uint8_t) (u16coil % 16);
 
-        bitWrite(
+        // bitWrite(
+        // 	modH->u8Buffer[ modH->u8BufferSize ],
+        //     u8bitsno,
+		//     bitRead( modH->u16regs[ u16currentRegister ], u8currentBit ) );
+		    bitWrite(
         	modH->u8Buffer[ modH->u8BufferSize ],
             u8bitsno,
-		    bitRead( modH->u16regs[ u16currentRegister ], u8currentBit ) );
+		    Device_GetCoilValue(u16currentCoil) );
         u8bitsno ++;
 
         if (u8bitsno > 7)
@@ -1740,13 +1750,24 @@ int8_t process_FC3(modbusHandler_t *modH)
 
     modH->u8Buffer[ 2 ]       = u8regsno * 2;
     modH->u8BufferSize         = 3;
-
+	uint16_t Val;
     for (i = u16StartAdd; i < u16StartAdd + u8regsno; i++)
     {
-    	modH->u8Buffer[ modH->u8BufferSize ] = highByte(modH->u16regs[i]);
+    	// modH->u8Buffer[ modH->u8BufferSize ] = highByte(modH->u16regs[i]);
+    	// modH->u8BufferSize++;
+    	// modH->u8Buffer[ modH->u8BufferSize ] = lowByte(modH->u16regs[i]);
+    	// modH->u8BufferSize++;
+
+		// modH->u8Buffer[ modH->u8BufferSize ] = highByte(modH->Device[1].Value);
+    	// modH->u8BufferSize++;
+    	// modH->u8Buffer[ modH->u8BufferSize ] = lowByte(modH->Device[1].Value);
+    	// modH->u8BufferSize++;
+		Val = Testu16_Get(u16StartAdd);
+		modH->u8Buffer[ modH->u8BufferSize ] = highByte(Val);
     	modH->u8BufferSize++;
-    	modH->u8Buffer[ modH->u8BufferSize ] = lowByte(modH->u16regs[i]);
+    	modH->u8Buffer[ modH->u8BufferSize ] = lowByte(Val);
     	modH->u8BufferSize++;
+
     }
     u8CopyBufferSize = modH->u8BufferSize +2;
     sendTxBuffer(modH);
@@ -1774,11 +1795,16 @@ int8_t process_FC5( modbusHandler_t *modH )
     u8currentBit = (uint8_t) (u16coil % 16);
 
     // write to coil
-    bitWrite(
-    	modH->u16regs[ u16currentRegister ],
-        u8currentBit,
-		modH->u8Buffer[ NB_HI ] == 0xff );
+    // bitWrite(
+    // 	modH->u16regs[ u16currentRegister ],
+    //     u8currentBit,
+	// 	modH->u8Buffer[ NB_HI ] == 0xff );
+    // bitWrite(
+    // 	modH->u16regs[ u16currentRegister ],
+    //     u8currentBit,
+	// 	modH->u8Buffer[ NB_HI ] == 0xff );
 
+	Device_WriteCoil(u16currentRegister,modH->u8Buffer[ NB_HI ]);
 
     // send answer to master
     modH->u8BufferSize = 6;
@@ -1803,8 +1829,8 @@ int8_t process_FC6(modbusHandler_t *modH )
     uint8_t u8CopyBufferSize;
     uint16_t u16val = word( modH->u8Buffer[ NB_HI ], modH->u8Buffer[ NB_LO ] );
 
-    modH->u16regs[ u16add ] = u16val;
-
+    //modH->u16regs[ u16add ] = u16val;
+	Device_WriteRegister(u16add,u16val);
 /**	USR Call Modbus Create Queue	**/
 	Ac_TempQueueUpdate(u16val);
 

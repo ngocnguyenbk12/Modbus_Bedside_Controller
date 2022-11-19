@@ -13,6 +13,7 @@ public:
     virtual void tearDownScreen();
 
 /**         Usr Define              **/
+    void RTC_UpdateTime(uint8_t hour, uint8_t minute, uint8_t second);
 protected:
 };
 

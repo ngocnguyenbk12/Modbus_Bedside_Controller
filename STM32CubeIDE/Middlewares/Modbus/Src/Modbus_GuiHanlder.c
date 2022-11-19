@@ -9,35 +9,47 @@
 
 
 #include "Modbus_GuiHandler.h"
-
-
+#include "Device_Trace.h"
+#include "Modbus_Cfg.h"
+volatile uint16_t Curr_Value;
 
 Std_Return Ac_TempUpdate(uint16_t value, Ac_ActionType action)
 {
-    mHandlers[0]->u16regs[30010] = 0xFFFF;
+    //mHandlers[0]->u16regs[30010] = 0xFFFF;
+
+    Curr_Value = Testu16_Get(TEMP_ADDRESS);
     Std_Return RetVal = E_OK;
     switch (action)
     {
     case AC_SETLOW:
-        mHandlers[0]->u16regs[30001] = 18;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+        //mHandlers[0]->u16regs[30001] = 18;
         break;
     case AC_SETMED:
-        mHandlers[0]->u16regs[30001] = 22;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+       // mHandlers[0]->u16regs[30001] = 22;
         break;
     case AC_SETHIGH:
-        mHandlers[0]->u16regs[30001] = 26;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+       // mHandlers[0]->u16regs[30001] = 26;
         break;
     case AC_UP:
-        mHandlers[0]->u16regs[30001]++;
+        Curr_Value++;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+       // mHandlers[0]->u16regs[30001]++;
         break;
     case AC_DOWN:
-        mHandlers[0]->u16regs[30001]--;
+        Curr_Value--;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+       // mHandlers[0]->u16regs[30001]--;
         break;
     case AC_ON:
-        mHandlers[0]->u16regs[30001] = 22;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+       // mHandlers[0]->u16regs[30001] = 22;
         break;
     case AC_STOP:
-        mHandlers[0]->u16regs[30001] = 0;
+        Device_WriteRegister(TEMP_ADDRESS,value);
+        // mHandlers[0]->u16regs[30001] = 0;
         break;
     default:
         break;
