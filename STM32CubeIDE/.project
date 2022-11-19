@@ -574,14 +574,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/LIGHT_VEWPresenter.cpp</name>
+			<name>Application/User/gui/LIGHT_VIEWPresenter.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/light_vew_screen/LIGHT_VEWPresenter.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/light_view_screen/LIGHT_VIEWPresenter.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/LIGHT_VEWView.cpp</name>
+			<name>Application/User/gui/LIGHT_VIEWView.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/light_vew_screen/LIGHT_VEWView.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/light_view_screen/LIGHT_VIEWView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/MAIN_MENUPresenter.cpp</name>
@@ -607,16 +607,6 @@
 			<name>Application/User/gui/SERVICE_VIEWView.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/service_view_screen/SERVICE_VIEWView.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/SETTING_VIEWPresenter.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/setting_view_screen/SETTING_VIEWPresenter.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/SETTING_VIEWView.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/setting_view_screen/SETTING_VIEWView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/TIME_SETTINGPresenter.cpp</name>
@@ -724,9 +714,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/LIGHT_VEWViewBase.cpp</name>
+			<name>Application/User/generated/LIGHT_VIEWViewBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/light_vew_screen/LIGHT_VEWViewBase.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/light_view_screen/LIGHT_VIEWViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/MAIN_MENUViewBase.cpp</name>
@@ -737,11 +727,6 @@
 			<name>Application/User/generated/SERVICE_VIEWViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/service_view_screen/SERVICE_VIEWViewBase.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/SETTING_VIEWViewBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/setting_view_screen/SETTING_VIEWViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/TIME_SETTINGViewBase.cpp</name>
@@ -792,6 +777,11 @@
 			<name>Application/User/generated/image_Blue_Clocks_Hands_clock_standard_second_hand.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Clocks_Hands_clock_standard_second_hand.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Textures_binding_light.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Textures_binding_light.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Blue_Textures_whitewall.cpp</name>

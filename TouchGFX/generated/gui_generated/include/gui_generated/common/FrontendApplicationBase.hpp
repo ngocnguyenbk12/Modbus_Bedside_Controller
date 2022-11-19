@@ -21,8 +21,8 @@ public:
     // AC_VIEW
     void gotoAC_VIEWScreenNoTransition();
 
-    // LIGHT_VEW
-    void gotoLIGHT_VEWScreenNoTransition();
+    // LIGHT_VIEW
+    void gotoLIGHT_VIEWScreenNoTransition();
 
     // SERVICE_VIEW
     void gotoSERVICE_VIEWScreenNoTransition();
@@ -41,8 +41,8 @@ protected:
     // AC_VIEW
     void gotoAC_VIEWScreenNoTransitionImpl();
 
-    // LIGHT_VEW
-    void gotoLIGHT_VEWScreenNoTransitionImpl();
+    // LIGHT_VIEW
+    void gotoLIGHT_VIEWScreenNoTransitionImpl();
 
     // SERVICE_VIEW
     void gotoSERVICE_VIEWScreenNoTransitionImpl();

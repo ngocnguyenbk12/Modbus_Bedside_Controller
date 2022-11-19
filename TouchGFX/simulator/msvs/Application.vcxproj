@@ -22,9 +22,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\ac_view_screen\AC_VIEWViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\light_vew_screen\LIGHT_VEWPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\light_vew_screen\LIGHT_VEWView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\light_vew_screen\LIGHT_VEWViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\main_menu_screen\MAIN_MENUPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\main_menu_screen\MAIN_MENUView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\main_menu_screen\MAIN_MENUViewBase.cpp"/>
@@ -32,13 +29,13 @@
     <ClCompile Include="..\..\gui\src\service_view_screen\SERVICE_VIEWPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\service_view_screen\SERVICE_VIEWView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\service_view_screen\SERVICE_VIEWViewBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\setting_view_screen\SETTING_VIEWPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\setting_view_screen\SETTING_VIEWView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\setting_view_screen\SETTING_VIEWViewBase.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
     <ClCompile Include="..\..\gui\src\time_setting_screen\TIME_SETTINGPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\time_setting_screen\TIME_SETTINGView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\time_setting_screen\TIME_SETTINGViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\light_view_screen\LIGHT_VIEWPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\light_view_screen\LIGHT_VIEWView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\light_view_screen\LIGHT_VIEWViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -187,9 +184,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendApplicationBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\light_vew_screen\LIGHT_VEWPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\light_vew_screen\LIGHT_VEWView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\light_vew_screen\LIGHT_VEWViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\main_menu_screen\MAIN_MENUPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\main_menu_screen\MAIN_MENUView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_menu_screen\MAIN_MENUViewBase.hpp"/>
@@ -199,14 +193,14 @@
     <ClInclude Include="..\..\gui\include\gui\service_view_screen\SERVICE_VIEWPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\service_view_screen\SERVICE_VIEWView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\service_view_screen\SERVICE_VIEWViewBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\setting_view_screen\SETTING_VIEWPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\setting_view_screen\SETTING_VIEWView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\setting_view_screen\SETTING_VIEWViewBase.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\time_setting_screen\TIME_SETTINGPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\time_setting_screen\TIME_SETTINGView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\time_setting_screen\TIME_SETTINGViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\light_view_screen\LIGHT_VIEWPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\light_view_screen\LIGHT_VIEWView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\light_view_screen\LIGHT_VIEWViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

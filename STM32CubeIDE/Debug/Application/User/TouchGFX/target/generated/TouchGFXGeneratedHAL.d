@@ -68,15 +68,12 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../../TouchGFX/gui/include/gui/light_vew_screen/LIGHT_VEWView.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/light_vew_screen/LIGHT_VEWViewBase.hpp \
- ../../TouchGFX/gui/include/gui/light_vew_screen/LIGHT_VEWPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/light_view_screen/LIGHT_VIEWView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/light_view_screen/LIGHT_VIEWViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/light_view_screen/LIGHT_VIEWPresenter.hpp \
  ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/service_view_screen/SERVICE_VIEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWPresenter.hpp \
- ../../TouchGFX/gui/include/gui/setting_view_screen/SETTING_VIEWView.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/setting_view_screen/SETTING_VIEWViewBase.hpp \
- ../../TouchGFX/gui/include/gui/setting_view_screen/SETTING_VIEWPresenter.hpp \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGPresenter.hpp \
@@ -274,23 +271,17 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
-../../TouchGFX/gui/include/gui/light_vew_screen/LIGHT_VEWView.hpp:
+../../TouchGFX/gui/include/gui/light_view_screen/LIGHT_VIEWView.hpp:
 
-../../TouchGFX/generated/gui_generated/include/gui_generated/light_vew_screen/LIGHT_VEWViewBase.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/light_view_screen/LIGHT_VIEWViewBase.hpp:
 
-../../TouchGFX/gui/include/gui/light_vew_screen/LIGHT_VEWPresenter.hpp:
+../../TouchGFX/gui/include/gui/light_view_screen/LIGHT_VIEWPresenter.hpp:
 
 ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWView.hpp:
 
 ../../TouchGFX/generated/gui_generated/include/gui_generated/service_view_screen/SERVICE_VIEWViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWPresenter.hpp:
-
-../../TouchGFX/gui/include/gui/setting_view_screen/SETTING_VIEWView.hpp:
-
-../../TouchGFX/generated/gui_generated/include/gui_generated/setting_view_screen/SETTING_VIEWViewBase.hpp:
-
-../../TouchGFX/gui/include/gui/setting_view_screen/SETTING_VIEWPresenter.hpp:
 
 ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGView.hpp:
 

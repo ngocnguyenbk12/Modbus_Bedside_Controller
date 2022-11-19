@@ -169,20 +169,8 @@
     <Filter Include="Header Files\gui\time_setting_screen">
       <UniqueIdentifier>AC4C0BB0-CBDB-8C46-B53F-4B085803FBA7</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\setting_view_screen">
-      <UniqueIdentifier>C0980ACA-A1C7-5B77-4A65-6FA4319CFDE0</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\gui\time_setting_screen">
       <UniqueIdentifier>5EAA345B-84F8-9283-31D0-5D489C7795AA</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\setting_view_screen">
-      <UniqueIdentifier>1E44491A-D281-B40E-D850-CE556095A3F8</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\light_vew_screen">
-      <UniqueIdentifier>E183CAEB-1ED4-74A1-4804-A190132E70B0</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\light_vew_screen">
-      <UniqueIdentifier>77166C51-27CF-A2A2-FFEE-F1117D8F45D7</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\common">
       <UniqueIdentifier>8013E6A1-5FCE-30E0-F4FA-B6C338E069AA</UniqueIdentifier>
@@ -211,23 +199,11 @@
     <Filter Include="Source Files\generated\gui_generated\main_menu_screen">
       <UniqueIdentifier>F3E03FD8-217A-2CAF-D948-6F3079FE58A3</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\setting_view_screen">
-      <UniqueIdentifier>5133DDFA-788A-58A4-F8C2-8B2CBC7E4D85</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\setting_view_screen">
-      <UniqueIdentifier>EC149BE5-2621-831B-4E3B-6DB762D447C7</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated\ac_view_screen">
       <UniqueIdentifier>2CD9112B-0A41-52A4-5AC3-1DD045FAD056</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\light_vew_screen">
-      <UniqueIdentifier>E61A83A4-F094-F74A-81EC-811B07D232A4</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated\ac_view_screen">
       <UniqueIdentifier>DB1F35AB-84DA-6F50-BDB4-37C4FB56B7FA</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\light_vew_screen">
-      <UniqueIdentifier>71C80CF1-3972-765E-23C1-F1C2B5377361</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\gui_generated\service_view_screen">
       <UniqueIdentifier>D6CD3259-F177-830B-630C-0AB6CF074E05</UniqueIdentifier>
@@ -243,6 +219,18 @@
     </Filter>
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>26365FF4-8EFB-20F3-DD8B-7ECC56D59F5C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\light_view_screen">
+      <UniqueIdentifier>B57AE033-AEF3-24FA-4FD2-4B3124225F1B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\light_view_screen">
+      <UniqueIdentifier>43632717-D519-FFDD-7328-FEB22F2E9671</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\light_view_screen">
+      <UniqueIdentifier>7B80B46E-1797-CB8B-46AD-702ABA2D7591</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\light_view_screen">
+      <UniqueIdentifier>30F1E7C4-3AD5-3569-A7BF-72BDA4ECE220</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -279,15 +267,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp">
       <Filter>Source Files\generated\gui_generated\common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\light_vew_screen\LIGHT_VEWPresenter.cpp">
-      <Filter>Source Files\gui\light_vew_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\light_vew_screen\LIGHT_VEWView.cpp">
-      <Filter>Source Files\gui\light_vew_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\light_vew_screen\LIGHT_VEWViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\light_vew_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\main_menu_screen\MAIN_MENUPresenter.cpp">
       <Filter>Source Files\gui\main_menu_screen</Filter>
     </ClCompile>
@@ -309,15 +288,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\service_view_screen\SERVICE_VIEWViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\service_view_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\setting_view_screen\SETTING_VIEWPresenter.cpp">
-      <Filter>Source Files\gui\setting_view_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\setting_view_screen\SETTING_VIEWView.cpp">
-      <Filter>Source Files\gui\setting_view_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\setting_view_screen\SETTING_VIEWViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\setting_view_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
@@ -329,6 +299,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\time_setting_screen\TIME_SETTINGViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\time_setting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\light_view_screen\LIGHT_VIEWPresenter.cpp">
+      <Filter>Source Files\gui\light_view_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\light_view_screen\LIGHT_VIEWView.cpp">
+      <Filter>Source Files\gui\light_view_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\light_view_screen\LIGHT_VIEWViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\light_view_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -766,15 +745,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\light_vew_screen\LIGHT_VEWPresenter.hpp">
-      <Filter>Header Files\gui\light_vew_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\light_vew_screen\LIGHT_VEWView.hpp">
-      <Filter>Header Files\gui\light_vew_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\light_vew_screen\LIGHT_VEWViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\light_vew_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\main_menu_screen\MAIN_MENUPresenter.hpp">
       <Filter>Header Files\gui\main_menu_screen</Filter>
     </ClInclude>
@@ -802,15 +772,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\service_view_screen\SERVICE_VIEWViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\service_view_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\setting_view_screen\SETTING_VIEWPresenter.hpp">
-      <Filter>Header Files\gui\setting_view_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\setting_view_screen\SETTING_VIEWView.hpp">
-      <Filter>Header Files\gui\setting_view_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\setting_view_screen\SETTING_VIEWViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\setting_view_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
@@ -825,6 +786,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\time_setting_screen\TIME_SETTINGViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\time_setting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\light_view_screen\LIGHT_VIEWPresenter.hpp">
+      <Filter>Header Files\gui\light_view_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\light_view_screen\LIGHT_VIEWView.hpp">
+      <Filter>Header Files\gui\light_view_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\light_view_screen\LIGHT_VIEWViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\light_view_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

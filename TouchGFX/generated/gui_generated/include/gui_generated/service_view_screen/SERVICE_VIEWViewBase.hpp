@@ -8,6 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/service_view_screen/SERVICE_VIEWPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TiledImage.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class SERVICE_VIEWViewBase : public touchgfx::View<SERVICE_VIEWPresenter>
 {
@@ -20,9 +22,25 @@ protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
     }
+
+    /*
+     * Member Declarations
+     */
     touchgfx::Box __background;
+    touchgfx::TiledImage tiledImage1;
+    touchgfx::ButtonWithLabel BACK;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<SERVICE_VIEWViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

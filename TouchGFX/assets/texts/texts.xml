@@ -5,10 +5,10 @@
       <Translation Language="GB">Setting</Translation>
     </Text>
     <Text Id="__SingleUse_LSOD" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">Service</Translation>
+      <Translation Language="GB">Light</Translation>
     </Text>
     <Text Id="__SingleUse_UW39" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">Light</Translation>
+      <Translation Language="GB">Service</Translation>
     </Text>
     <Text Id="__SingleUse_XA5L" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Air Conditioner</Translation>
@@ -31,15 +31,6 @@
     <Text Id="__SingleUse_OAE4" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
-    <Text Id="__SingleUse_KX90" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">BED</Translation>
-    </Text>
-    <Text Id="__SingleUse_3303" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">KITCHEN</Translation>
-    </Text>
-    <Text Id="__SingleUse_V0QR" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">BATH</Translation>
-    </Text>
     <Text Id="__SingleUse_BYNC" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
@@ -50,6 +41,24 @@
       <Translation Language="GB">0</Translation>
     </Text>
     <Text Id="__SingleUse_3WOS" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">BACK</Translation>
+    </Text>
+    <Text Id="__SingleUse_IUFI" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 0</Translation>
+    </Text>
+    <Text Id="__SingleUse_6194" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 3</Translation>
+    </Text>
+    <Text Id="__SingleUse_MXT3" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 2</Translation>
+    </Text>
+    <Text Id="__SingleUse_WSPH" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 1</Translation>
+    </Text>
+    <Text Id="__SingleUse_BE17" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 4&#10;</Translation>
+    </Text>
+    <Text Id="__SingleUse_B11L" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
   </Texts>

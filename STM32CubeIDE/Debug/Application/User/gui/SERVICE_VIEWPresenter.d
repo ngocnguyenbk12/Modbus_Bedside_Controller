@@ -42,7 +42,14 @@ Application/User/gui/SERVICE_VIEWPresenter.o: \
  ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 
 ../../TouchGFX/gui/include/gui/service_view_screen/SERVICE_VIEWView.hpp:
 
@@ -129,3 +136,17 @@ Application/User/gui/SERVICE_VIEWPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:

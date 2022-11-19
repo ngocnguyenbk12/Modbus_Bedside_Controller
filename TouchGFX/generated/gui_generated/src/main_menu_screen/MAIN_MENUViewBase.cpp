@@ -80,9 +80,9 @@ void MAIN_MENUViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& sr
     else if (&src == &LIGHT_BUTTON)
     {
         //MAIN_2_LIGHT
-        //When LIGHT_BUTTON clicked change screen to LIGHT_VEW
-        //Go to LIGHT_VEW with no screen transition
-        application().gotoLIGHT_VEWScreenNoTransition();
+        //When LIGHT_BUTTON clicked change screen to LIGHT_VIEW
+        //Go to LIGHT_VIEW with no screen transition
+        application().gotoLIGHT_VIEWScreenNoTransition();
     }
     else if (&src == &SERVICE_BUTTON)
     {

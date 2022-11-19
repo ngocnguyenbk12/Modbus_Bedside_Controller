@@ -13,12 +13,10 @@
 #include <gui/main_menu_screen/MAIN_MENUPresenter.hpp>
 #include <gui/ac_view_screen/AC_VIEWView.hpp>
 #include <gui/ac_view_screen/AC_VIEWPresenter.hpp>
-#include <gui/light_vew_screen/LIGHT_VEWView.hpp>
-#include <gui/light_vew_screen/LIGHT_VEWPresenter.hpp>
+#include <gui/light_view_screen/LIGHT_VIEWView.hpp>
+#include <gui/light_view_screen/LIGHT_VIEWPresenter.hpp>
 #include <gui/service_view_screen/SERVICE_VIEWView.hpp>
 #include <gui/service_view_screen/SERVICE_VIEWPresenter.hpp>
-#include <gui/setting_view_screen/SETTING_VIEWView.hpp>
-#include <gui/setting_view_screen/SETTING_VIEWPresenter.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGView.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGPresenter.hpp>
 
@@ -65,17 +63,17 @@ void FrontendApplicationBase::gotoAC_VIEWScreenNoTransitionImpl()
     touchgfx::makeTransition<AC_VIEWView, AC_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// LIGHT_VEW
+// LIGHT_VIEW
 
-void FrontendApplicationBase::gotoLIGHT_VEWScreenNoTransition()
+void FrontendApplicationBase::gotoLIGHT_VIEWScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoLIGHT_VEWScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoLIGHT_VIEWScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoLIGHT_VEWScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoLIGHT_VIEWScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<LIGHT_VEWView, LIGHT_VEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<LIGHT_VIEWView, LIGHT_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // SERVICE_VIEW

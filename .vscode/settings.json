@@ -13,6 +13,7 @@
         "inttypes.h": "c",
         "device_trace.h": "c",
         "main.h": "c",
-        "modbus_cfg.h": "c"
+        "modbus_cfg.h": "c",
+        "modbus_gpio.h": "c"
     }
 }

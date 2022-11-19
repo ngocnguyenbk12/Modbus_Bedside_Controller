@@ -3,17 +3,44 @@
 /*********************************************************************************/
 #include <gui_generated/service_view_screen/SERVICE_VIEWViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-SERVICE_VIEWViewBase::SERVICE_VIEWViewBase()
+SERVICE_VIEWViewBase::SERVICE_VIEWViewBase() :
+    buttonCallback(this, &SERVICE_VIEWViewBase::buttonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
+    tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_TEXTURES_BINDING_LIGHT_ID));
+    tiledImage1.setPosition(0, 0, 480, 272);
+    tiledImage1.setOffset(0, 0);
+
+    BACK.setXY(310, 212);
+    BACK.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    BACK.setLabelText(touchgfx::TypedText(T___SINGLEUSE_B11L));
+    BACK.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    BACK.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    BACK.setAction(buttonCallback);
+
     add(__background);
+    add(tiledImage1);
+    add(BACK);
 }
 
 void SERVICE_VIEWViewBase::setupScreen()
 {
 
+}
+
+void SERVICE_VIEWViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &BACK)
+    {
+        //SERVIEC_2_MAIN
+        //When BACK clicked change screen to MAIN_MENU
+        //Go to MAIN_MENU with no screen transition
+        application().gotoMAIN_MENUScreenNoTransition();
+    }
 }

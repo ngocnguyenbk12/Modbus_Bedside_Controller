@@ -16,12 +16,10 @@
 #include <gui/main_menu_screen/MAIN_MENUPresenter.hpp>
 #include <gui/ac_view_screen/AC_VIEWView.hpp>
 #include <gui/ac_view_screen/AC_VIEWPresenter.hpp>
-#include <gui/light_vew_screen/LIGHT_VEWView.hpp>
-#include <gui/light_vew_screen/LIGHT_VEWPresenter.hpp>
+#include <gui/light_view_screen/LIGHT_VIEWView.hpp>
+#include <gui/light_view_screen/LIGHT_VIEWPresenter.hpp>
 #include <gui/service_view_screen/SERVICE_VIEWView.hpp>
 #include <gui/service_view_screen/SERVICE_VIEWPresenter.hpp>
-#include <gui/setting_view_screen/SETTING_VIEWView.hpp>
-#include <gui/setting_view_screen/SETTING_VIEWPresenter.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGView.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGPresenter.hpp>
 
@@ -48,11 +46,10 @@ public:
      */
     typedef touchgfx::meta::TypeList< MAIN_MENUView,
             touchgfx::meta::TypeList< AC_VIEWView,
-            touchgfx::meta::TypeList< LIGHT_VEWView,
+            touchgfx::meta::TypeList< LIGHT_VIEWView,
             touchgfx::meta::TypeList< SERVICE_VIEWView,
-            touchgfx::meta::TypeList< SETTING_VIEWView,
             touchgfx::meta::TypeList< TIME_SETTINGView,
-            touchgfx::meta::Nil > > > > >
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -66,11 +63,10 @@ public:
      */
     typedef touchgfx::meta::TypeList< MAIN_MENUPresenter,
             touchgfx::meta::TypeList< AC_VIEWPresenter,
-            touchgfx::meta::TypeList< LIGHT_VEWPresenter,
+            touchgfx::meta::TypeList< LIGHT_VIEWPresenter,
             touchgfx::meta::TypeList< SERVICE_VIEWPresenter,
-            touchgfx::meta::TypeList< SETTING_VIEWPresenter,
             touchgfx::meta::TypeList< TIME_SETTINGPresenter,
-            touchgfx::meta::Nil > > > > >
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -1,17 +1,17 @@
-#ifndef LIGHT_VEWPRESENTER_HPP
-#define LIGHT_VEWPRESENTER_HPP
+#ifndef LIGHT_VIEWPRESENTER_HPP
+#define LIGHT_VIEWPRESENTER_HPP
 
 #include <gui/model/ModelListener.hpp>
 #include <mvp/Presenter.hpp>
 
 using namespace touchgfx;
 
-class LIGHT_VEWView;
+class LIGHT_VIEWView;
 
-class LIGHT_VEWPresenter : public touchgfx::Presenter, public ModelListener
+class LIGHT_VIEWPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    LIGHT_VEWPresenter(LIGHT_VEWView& v);
+    LIGHT_VIEWPresenter(LIGHT_VIEWView& v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -25,12 +25,12 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~LIGHT_VEWPresenter() {};
+    virtual ~LIGHT_VIEWPresenter() {};
 
 private:
-    LIGHT_VEWPresenter();
+    LIGHT_VIEWPresenter();
 
-    LIGHT_VEWView& view;
+    LIGHT_VIEWView& view;
 };
 
-#endif // LIGHT_VEWPRESENTER_HPP
+#endif // LIGHT_VIEWPRESENTER_HPP
