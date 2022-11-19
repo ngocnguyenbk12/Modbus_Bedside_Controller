@@ -14,6 +14,7 @@
         "device_trace.h": "c",
         "main.h": "c",
         "modbus_cfg.h": "c",
-        "modbus_gpio.h": "c"
+        "modbus_gpio.h": "c",
+        "stm32f7xx_hal_gpio.h": "c"
     }
 }

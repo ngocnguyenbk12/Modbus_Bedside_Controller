@@ -16,3 +16,13 @@ void LIGHT_VIEWPresenter::deactivate()
 {
 
 }
+
+void LIGHT_VIEWPresenter::LIGHT_Setnewvalue(uint16_t pin)
+{
+    view.LIGHT_Updater(pin);
+}
+
+void LIGHT_VIEWPresenter::LIGHT_MB2Light(uint16_t pin)
+{
+    view.Light_Updater(pin);
+}

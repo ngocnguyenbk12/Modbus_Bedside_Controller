@@ -1804,7 +1804,9 @@ int8_t process_FC5( modbusHandler_t *modH )
     //     u8currentBit,
 	// 	modH->u8Buffer[ NB_HI ] == 0xff );
 
-	Device_WriteCoil(u16currentRegister,modH->u8Buffer[ NB_HI ]);
+	Device_WriteCoil(u16coil,modH->u8Buffer[ NB_HI ]);
+	Light_QueueUpdate(u16coil);
+	
 
     // send answer to master
     modH->u8BufferSize = 6;
@@ -1872,17 +1874,20 @@ int8_t process_FC15( modbusHandler_t *modH )
     {
 
         u16coil = u16StartCoil + u16currentCoil;
-        u16currentRegister = (u16coil / 16);
-        u8currentBit = (uint8_t) (u16coil % 16);
-
-        bTemp = bitRead(
+		        bTemp = bitRead(
         			modH->u8Buffer[ u8frameByte ],
                     u8bitsno );
+		Device_WriteCoil(u16coil,(bool)(((modH->u8Buffer[ u8frameByte ])>>(u8bitsno)) & 0x01));
+	    Light_QueueUpdate(u16coil);
+        // u16currentRegister = (u16coil / 16);
+        // u8currentBit = (uint8_t) (u16coil % 16);
 
-        bitWrite(
-            modH->u16regs[ u16currentRegister ],
-            u8currentBit,
-            bTemp );
+
+
+        // bitWrite(
+        //     modH->u16regs[ u16currentRegister ],
+        //     u8currentBit,
+        //     bTemp );
 
         u8bitsno ++;
 

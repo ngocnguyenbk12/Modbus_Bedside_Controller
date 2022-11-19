@@ -8,7 +8,6 @@
  */
 
 #include "main.h"
-#include "Std_Return.h"
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "task.h"
@@ -37,8 +36,10 @@ typedef enum
 
 
 xQueueHandle    Q_Modbus2AC;
+xQueueHandle    Q_Modbus2Light;
 modbusHandler_t *mHandlers[MAX_M_HANDLERS];
 
 
-Std_Return Ac_TempUpdate(uint16_t value, Ac_ActionType action);
-Std_Return Ac_TempQueueUpdate(uint16_t Value);
+void Ac_TempUpdate(uint16_t value, Ac_ActionType action);
+void Ac_TempQueueUpdate(uint16_t Value);
+void Light_QueueUpdate(uint16_t addr);

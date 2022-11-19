@@ -17,8 +17,10 @@
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
+#include "main.h"
 
 #define MODBUS_SLAVE_DEVICE_MAX         8
+#define MODBUS_SLAVE_COIL_MAX           8
  
 typedef enum
 {
@@ -168,8 +170,14 @@ typedef struct
 {
     uint16_t Addr;
     uint16_t  Value;
-    bool    bValue;
 }DeviceType;
+
+
+typedef struct
+{
+    uint16_t Addr;
+    bool Value;
+}DeviceCoil_Type;
 
 
 
@@ -217,6 +225,7 @@ typedef struct
 	mb_hardware_t xTypeHW;
 
     DeviceType *Device;
+    DeviceCoil_Type *CoilDevice;
 
 #if ENABLE_TCP == 1
 

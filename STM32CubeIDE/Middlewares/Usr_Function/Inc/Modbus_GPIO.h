@@ -1,6 +1,7 @@
-#include "Std_Return.h"
 #include "main.h"
 #include "stm32f7xx_hal_gpio.h"
+#include "Modbus_Cfg.h"
+#include <stdbool.h>
 
 #define LIGHT_PORT GPIOF
 
@@ -14,4 +15,5 @@
 #define LIGHT_ON         1
 
 void ModbusLight_Out(uint16_t pin, GPIO_PinState value);
+void ModbusGpio_WritebyAddr(uint16_t Addr, bool value);
 

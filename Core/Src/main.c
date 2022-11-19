@@ -27,7 +27,6 @@
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
 #include "Modbus.h"
-#include "Std_Return.h"
 #include "Modbus_Master.h"
 #include "Modbus_Cfg.h"
 /* USER CODE END Includes */
@@ -131,8 +130,9 @@ extern void videoTaskFunc(void *argument);
 /* USER CODE BEGIN 0 */
 /**------------------------ Variables ---------------------------**/
 modbusHandler_t ModbusH;
-uint16_t ModbusDATA[50000];
+uint16_t ModbusDATA[10];
 DeviceType Slave_Data[MODBUS_SLAVE_DEVICE_MAX];
+DeviceCoil_Type Coil_Data[MODBUS_SLAVE_COIL_MAX];
 
 
 
@@ -202,12 +202,27 @@ int main(void)
   ModbusH.xTypeHW = USART_HW;
   
   ModbusH.Device = Slave_Data;
-  ModbusH.Device[0].Addr = LIGHT_ADDRESS;
-  ModbusH.Device[0].bValue = true;
   ModbusH.Device[1].Addr = DEVICE_3;
   ModbusH.Device[1].Value = 245;
   ModbusH.Device[2].Addr = TEMP_ADDRESS;
   ModbusH.Device[2].Value = 22;
+
+  ModbusH.CoilDevice = Coil_Data;
+  ModbusH.CoilDevice[0].Addr = LIGHT_0_ADDRESS;
+  ModbusH.CoilDevice[0].Value = false;
+
+  ModbusH.CoilDevice[1].Addr = LIGHT_1_ADDRESS;
+  ModbusH.CoilDevice[1].Value = false;
+
+  ModbusH.CoilDevice[2].Addr = LIGHT_2_ADDRESS;
+  ModbusH.CoilDevice[2].Value = false;
+
+  ModbusH.CoilDevice[3].Addr = LIGHT_3_ADDRESS;
+  ModbusH.CoilDevice[3].Value = false;
+
+  ModbusH.CoilDevice[4].Addr = LIGHT_4_ADDRESS;
+  ModbusH.CoilDevice[4].Value = false;
+  
 
     // Initialize Modbus library
   ModbusInit(&ModbusH);
@@ -218,6 +233,8 @@ int main(void)
 
 
   MMaster_Init();
+   DBGMCU->APB1FZ = 0xFFFFFFFF;
+ DBGMCU->APB2FZ = 0xFFFFFFFF;
   /* USER CODE END 2 */
 
   /* Init scheduler */

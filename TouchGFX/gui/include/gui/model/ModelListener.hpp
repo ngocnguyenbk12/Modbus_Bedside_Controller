@@ -1,4 +1,4 @@
-#ifndef MODELLISTENER_HPP
+    #ifndef MODELLISTENER_HPP
 #define MODELLISTENER_HPP
 
 #include <gui/model/Model.hpp>
@@ -16,8 +16,9 @@ public:
     }
     
     virtual void AC_Setnewvalue(unsigned short Value) {}
+    virtual void LIGHT_Setnewvalue(uint16_t pin) {}
     virtual void RTC_UpdateTime(uint8_t hour, uint8_t minute, uint8_t second) {}
-
+    virtual void LIGHT_MB2Light(uint16_t pin) {}
 protected:
     Model* model;
 };

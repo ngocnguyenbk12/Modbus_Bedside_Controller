@@ -42,7 +42,6 @@ Middlewares/Modbus/Src/Modbus_GuiHanlder.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Usr_Type/Std_Return.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -61,7 +60,8 @@ Middlewares/Modbus/Src/Modbus_GuiHanlder.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Device_Trace.h \
  D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Usr_Function/Inc/Modbus_GPIO.h
 
 D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_GuiHandler.h:
 
@@ -147,8 +147,6 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32Cu
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Usr_Type/Std_Return.h:
-
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 
 ../../Core/Inc/FreeRTOSConfig.h:
@@ -186,3 +184,5 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32Cu
 D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:
 
 D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:
+
+D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Usr_Function/Inc/Modbus_GPIO.h:

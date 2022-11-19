@@ -16,8 +16,11 @@ extern "C"
 	#include "stm32f7xx_hal.h"
 
    extern xQueueHandle    Q_Modbus2AC;
+   extern xQueueHandle	  Q_Modbus2Light;
    uint8_t counter = 0;
    uint16_t reg ;
+   uint16_t pin;
+
 extern RTC_HandleTypeDef hrtc;
 extern RTC_TimeTypeDef RTC_Time;
 extern RTC_DateTypeDef RTC_Date;
@@ -28,9 +31,11 @@ unsigned short Value ;
 
 
 
+
 Model::Model() : modelListener(0)
 {
     Q_Modbus2AC = xQueueGenericCreate(1,1,0);
+	Q_Modbus2Light = xQueueGenericCreate(1,1,0);
 }
 
 void Model::tick()
@@ -46,6 +51,11 @@ void Model::tick()
         // Update New value //
         modelListener->AC_Setnewvalue(Value);
     }
+	if(xQueueReceive(Q_Modbus2Light,&pin,0) == pdTRUE)
+	{
+		modelListener->LIGHT_MB2Light(pin);
+		//modelListener->LIGHT_Setnewvalue(pin);
+	}
 
 
 	if(counter>=10) // this is for slow down the frequency for reading variables

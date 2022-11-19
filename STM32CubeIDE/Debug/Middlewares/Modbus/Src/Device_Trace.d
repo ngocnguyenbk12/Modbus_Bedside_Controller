@@ -58,6 +58,8 @@ Middlewares/Modbus/Src/Device_Trace.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h \
+ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Usr_Function/Inc/Modbus_GPIO.h \
  D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h
 
 D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Device_Trace.h:
@@ -175,5 +177,9 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32Cu
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+
+D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:
+
+D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Usr_Function/Inc/Modbus_GPIO.h:
 
 D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:

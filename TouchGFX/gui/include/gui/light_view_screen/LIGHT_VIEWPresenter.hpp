@@ -26,6 +26,9 @@ public:
     virtual void deactivate();
 
     virtual ~LIGHT_VIEWPresenter() {};
+    
+    void LIGHT_Setnewvalue(uint16_t pin);
+    void LIGHT_MB2Light(uint16_t pin);
 
 private:
     LIGHT_VIEWPresenter();

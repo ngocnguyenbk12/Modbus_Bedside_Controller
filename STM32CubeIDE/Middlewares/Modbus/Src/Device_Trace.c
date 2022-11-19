@@ -1,7 +1,9 @@
 #include "Device_Trace.h"
+#include "Modbus_GPIO.h"
 
 
 extern DeviceType Slave_Data[MODBUS_SLAVE_DEVICE_MAX];
+extern DeviceCoil_Type Coil_Data[MODBUS_SLAVE_COIL_MAX];
 
 uint16_t Device_GetDeviceValue(uint16_t Addr)
 {
@@ -20,11 +22,11 @@ uint16_t Device_GetDeviceValue(uint16_t Addr)
 bool Device_GetCoilValue(uint16_t Addr)
 {
     bool RetVal;
-    for(uint8_t i; i< MODBUS_SLAVE_DEVICE_MAX; i++)
+    for(uint8_t i; i< MODBUS_SLAVE_COIL_MAX; i++)
     {
-        if(Slave_Data[i].Addr == Addr)
+        if(Coil_Data[i].Addr == Addr)
         {
-            RetVal = Slave_Data[i].Value;
+            RetVal = Coil_Data[i].Value;
             return RetVal;
         }
     }
@@ -46,11 +48,12 @@ uint16_t Device_GetRegister(uint16_t Addr)
 
 void Device_WriteCoil(uint16_t Addr, bool Value)
 {
-    for(uint8_t i; i< MODBUS_SLAVE_DEVICE_MAX; i++)
+    for(uint8_t i; i< MODBUS_SLAVE_COIL_MAX; i++)
     {
-        if(Slave_Data[i].Addr == Addr)
+        if(Coil_Data[i].Addr == Addr)
         {
-            Slave_Data[i].Value = (uint8_t)Value;
+            Coil_Data[i].Value = (uint8_t)Value;
+            ModbusGpio_WritebyAddr(Addr,Value);
         }
     }
 }

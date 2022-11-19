@@ -1,4 +1,6 @@
-ModelListener.hpp:19:18:virtual void ModelListener::RTC_UpdateTime(uint8_t, uint8_t, uint8_t)	0	static
+ModelListener.hpp:19:18:virtual void ModelListener::LIGHT_Setnewvalue(uint16_t)	0	static
+ModelListener.hpp:20:18:virtual void ModelListener::RTC_UpdateTime(uint8_t, uint8_t, uint8_t)	0	static
+ModelListener.hpp:21:18:virtual void ModelListener::LIGHT_MB2Light(uint16_t)	0	static
 AC_VIEWPresenter.hpp:28:13:AC_VIEWPresenter::~AC_VIEWPresenter()	0	static
 AC_VIEWPresenter.cpp:10:6:virtual void AC_VIEWPresenter::activate()	0	static
 AC_VIEWPresenter.cpp:20:6:virtual void AC_VIEWPresenter::AC_Setnewvalue(uint16_t)	0	static

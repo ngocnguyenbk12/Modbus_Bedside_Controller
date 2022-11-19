@@ -1,6 +1,6 @@
-Device_Trace.c:6:10:Device_GetDeviceValue	0	static
-Device_Trace.c:20:6:Device_GetCoilValue	0	static
-Device_Trace.c:33:10:Device_GetRegister	0	static
-Device_Trace.c:47:6:Device_WriteCoil	0	static
-Device_Trace.c:58:6:Device_WriteRegister	0	static
-Device_Trace.c:70:10:Testu16_Get	0	static
+Device_Trace.c:8:10:Device_GetDeviceValue	0	static
+Device_Trace.c:22:6:Device_GetCoilValue	0	static
+Device_Trace.c:35:10:Device_GetRegister	0	static
+Device_Trace.c:49:6:Device_WriteCoil	16	static
+Device_Trace.c:61:6:Device_WriteRegister	0	static
+Device_Trace.c:73:10:Testu16_Get	0	static

@@ -17,6 +17,8 @@ public:
     virtual void Light_Button2();
     virtual void Light_Button3();
     virtual void Light_Button4();
+    virtual void LIGHT_Updater(uint16_t pin);
+    virtual void Light_Updater(uint16_t pin);
 protected:
 };
 

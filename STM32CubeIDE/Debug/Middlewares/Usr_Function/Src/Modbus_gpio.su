@@ -1,1 +1,2 @@
-Modbus_gpio.c:3:6:ModbusLight_Out	0	static
+Modbus_gpio.c:5:6:ModbusLight_Out	0	static
+Modbus_gpio.c:9:6:ModbusGpio_WritebyAddr	0	static

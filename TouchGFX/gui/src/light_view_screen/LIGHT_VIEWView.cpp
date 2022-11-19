@@ -1,8 +1,12 @@
 #include <gui/light_view_screen/LIGHT_VIEWView.hpp>
 extern "C"
 {
+    #include "Modbus.h"
 	#include "Modbus_GPIO.h"
     #include "stm32f7xx_hal_gpio.h"
+    #include "touchgfx/hal/Types.hpp"
+    #include "Modbus_Cfg.h"
+    extern DeviceCoil_Type Coil_Data[MODBUS_SLAVE_COIL_MAX];
 }
 
 static int Light_0_State = 0;
@@ -24,6 +28,54 @@ void LIGHT_VIEWView::setupScreen()
 void LIGHT_VIEWView::tearDownScreen()
 {
     LIGHT_VIEWViewBase::tearDownScreen();
+}
+
+void LIGHT_VIEWView::Light_Updater(uint16_t pin)
+{
+    switch (pin)
+    {
+    case LIGHT_0_ADDRESS:
+        ModbusLight_Out(LIGHT_0_PIN,(GPIO_PinState)Coil_Data[0].Value);
+        break;
+    case LIGHT_1_ADDRESS:
+        ModbusLight_Out(LIGHT_1_PIN,(GPIO_PinState)Coil_Data[1].Value);
+        break;
+    case LIGHT_2_ADDRESS:
+        ModbusLight_Out(LIGHT_2_PIN,(GPIO_PinState)Coil_Data[2].Value);
+        break;
+    case LIGHT_3_ADDRESS:
+        ModbusLight_Out(LIGHT_3_PIN,(GPIO_PinState)Coil_Data[3].Value);
+        break;
+    case LIGHT_4_ADDRESS:
+        ModbusLight_Out(LIGHT_4_PIN,(GPIO_PinState)Coil_Data[4].Value);
+        break;
+    default:
+        break;
+    }
+}
+
+void LIGHT_VIEWView::LIGHT_Updater(uint16_t pin)
+{
+    switch (pin)
+    {
+    case LIGHT_0_ADDRESS:
+        ModbusLight_Out(LIGHT_0_PIN,(GPIO_PinState)Coil_Data[0].Value);
+        break;
+    case LIGHT_1_ADDRESS:
+        ModbusLight_Out(LIGHT_1_PIN,(GPIO_PinState)Coil_Data[1].Value);
+        break;
+    case LIGHT_2_ADDRESS:
+        ModbusLight_Out(LIGHT_2_PIN,(GPIO_PinState)Coil_Data[2].Value);
+        break;
+    case LIGHT_3_ADDRESS:
+        ModbusLight_Out(LIGHT_3_PIN,(GPIO_PinState)Coil_Data[3].Value);
+        break;
+    case LIGHT_4_ADDRESS:
+        ModbusLight_Out(LIGHT_4_PIN,(GPIO_PinState)Coil_Data[4].Value);
+        break;
+    default:
+        break;
+    }
 }
 
 void LIGHT_VIEWView::Light_Button0()
