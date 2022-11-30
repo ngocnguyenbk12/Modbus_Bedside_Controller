@@ -17,11 +17,10 @@
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
-#include "main.h"
+#include "ModbusDevice.h"
+#include "Modbus_DeviceCfg.h"
 
-#define MODBUS_SLAVE_DEVICE_MAX         8
-#define MODBUS_SLAVE_COIL_MAX           8
- 
+
 typedef enum
 {
     USART_HW = 1,
@@ -166,20 +165,6 @@ tcpclients_t;
 
 #endif
 
-typedef struct 
-{
-    uint16_t Addr;
-    uint16_t  Value;
-}DeviceType;
-
-
-typedef struct
-{
-    uint16_t Addr;
-    bool Value;
-}DeviceCoil_Type;
-
-
 
 /**
  * @struct modbusHandler_t
@@ -205,6 +190,8 @@ typedef struct
 	uint16_t u16regsize;
 	uint8_t dataRX;
 	int8_t i8state;
+    ModbusSlave_Device *Device; 
+    ModbusMaster_Device *MasterDevice;
 
 	//FreeRTOS components
 
@@ -223,9 +210,6 @@ typedef struct
 	modbusRingBuffer_t xBufferRX;
 	// type of hardware  TCP, USB CDC, USART
 	mb_hardware_t xTypeHW;
-
-    DeviceType *Device;
-    DeviceCoil_Type *CoilDevice;
 
 #if ENABLE_TCP == 1
 
@@ -252,55 +236,42 @@ enum
 
 
 extern modbusHandler_t *mHandlers[MAX_M_HANDLERS];
+extern modbusHandler_t *MastermHandler[MAX_M_HANDLERS];
+extern uint8_t numberHandlers;
 
-// Function prototypes
-void ModbusInit(modbusHandler_t * modH);
-void ModbusStart(modbusHandler_t * modH);
+
+
+extern modbusHandler_t Master_Modbus;
+extern uint16_t Master_ModbusData[10];
+extern ModbusMaster_Device MasterDevice;
+
+extern modbusHandler_t Slave_Modbus;
+extern uint16_t ModbusDATA[10];
+extern ModbusSlave_Device SlaveDevice;
+
+
+
+void MMaster_Init(void);
+void SModbus_Init(void);
+void StartTaskModbusSlave(void *argument); //slave
+void StartTaskModbusMaster(void *argument); //master
+
+
+
+
 
 #if ENABLE_USB_CDC == 1
 void ModbusStartCDC(modbusHandler_t * modH);
 #endif
-
-void setTimeOut( uint16_t u16timeOut); //!<write communication watch-dog timer
-uint16_t getTimeOut(); //!<get communication watch-dog timer value
-bool getTimeOutState(); //!<get communication watch-dog timer state
-void ModbusQuery(modbusHandler_t * modH, modbus_t telegram ); // put a query in the queue tail
-void ModbusQueryInject(modbusHandler_t * modH, modbus_t telegram); //put a query in the queue head
-void StartTaskModbusSlave(void *argument); //slave
-void StartTaskModbusMaster(void *argument); //master
-uint16_t calcCRC(uint8_t *Buffer, uint8_t u8length);
-
 #if ENABLE_TCP == 1
 void ModbusCloseConn(struct netconn *conn); //close the TCP connection
 void ModbusCloseConnNull(modbusHandler_t * modH); //close the TCP connection and cleans the modbus handler
 #endif
 
 
-//Function prototypes for ModbusRingBuffer
-void RingAdd(modbusRingBuffer_t *xRingBuffer, uint8_t u8Val); // adds a byte to the ring buffer
-uint8_t RingGetAllBytes(modbusRingBuffer_t *xRingBuffer, uint8_t *buffer); // gets all the available bytes into buffer and return the number of bytes read
-uint8_t RingGetNBytes(modbusRingBuffer_t *xRingBuffer, uint8_t *buffer, uint8_t uNumber); // gets uNumber of bytes from ring buffer, returns the actual number of bytes read
-uint8_t RingCountBytes(modbusRingBuffer_t *xRingBuffer); // return the number of available bytes
-void RingClear(modbusRingBuffer_t *xRingBuffer); // flushes the ring buffer
 
-extern uint8_t numberHandlers; //global variable to maintain the number of concurrent handlers
+ //global variable to maintain the number of concurrent handlers
 
-
-
-
-/* prototypes of the original library not implemented
-
-uint16_t getInCnt(); //!<number of incoming messages
-uint16_t getOutCnt(); //!<number of outcoming messages
-uint16_t getErrCnt(); //!<error counter
-uint8_t getID(); //!<get slave ID between 1 and 247
-uint8_t getState();
-uint8_t getLastError(); //!<get last error message
-void setID( uint8_t u8id ); //!<write new ID for the slave
-void setTxendPinOverTime( uint32_t u32overTime );
-void ModbusEnd(); //!<finish any communication and release serial communication port
-
-*/
 
 
 

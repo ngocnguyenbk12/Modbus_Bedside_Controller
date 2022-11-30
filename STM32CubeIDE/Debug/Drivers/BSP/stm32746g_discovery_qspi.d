@@ -1,6 +1,6 @@
 Drivers/BSP/stm32746g_discovery_qspi.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.c \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.c \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -24,6 +24,7 @@ Drivers/BSP/stm32746g_discovery_qspi.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -41,9 +42,9 @@ Drivers/BSP/stm32746g_discovery_qspi.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- d:\lv_modbus\project\git_master_implementation\modbus_bedside_controller\drivers\bsp\components\n25q128a\n25q128a.h
+ d:\lv_modbus\project\dualport\modbus_bedside_controller\drivers\bsp\components\n25q128a\n25q128a.h
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 
@@ -91,6 +92,8 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Drivers
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
 
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h:
+
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h:
@@ -125,4 +128,4 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Drivers
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 
-d:\lv_modbus\project\git_master_implementation\modbus_bedside_controller\drivers\bsp\components\n25q128a\n25q128a.h:
+d:\lv_modbus\project\dualport\modbus_bedside_controller\drivers\bsp\components\n25q128a\n25q128a.h:

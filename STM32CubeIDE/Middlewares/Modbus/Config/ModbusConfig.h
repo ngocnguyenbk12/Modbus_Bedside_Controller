@@ -17,7 +17,7 @@
 //#define ENABLE_USB_CDC 1
 
 /* Uncomment the following line to enable support for Modbus TCP. Only tested for Nucleo144-F429ZI. */
-//#define ENABLE_TCP 1
+#define ENABLE_TCP 1
 
 /* Uncomment the following line to enable support for Modbus RTU USART DMA mode. Only tested for Nucleo144-F429ZI.  */
 //#define ENABLE_USART_DMA 1

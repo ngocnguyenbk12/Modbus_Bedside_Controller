@@ -1,4 +1,4 @@
-Font.hpp:198:30:virtual const touchgfx::GlyphNode* touchgfx::Font::getGlyph(touchgfx::Unicode::UnicodeChar) const	16	static
+Font.hpp:198:30:virtual const touchgfx::GlyphNode* touchgfx::Font::getGlyph(touchgfx::Unicode::UnicodeChar) const	24	static
 Font.hpp:217:34:virtual touchgfx::Unicode::UnicodeChar touchgfx::Font::getFallbackChar() const	0	static
 Font.hpp:230:34:virtual touchgfx::Unicode::UnicodeChar touchgfx::Font::getEllipsisChar() const	0	static
 Font.hpp:319:44:virtual uint16_t touchgfx::Font::getFontHeight() const	0	static
@@ -10,7 +10,7 @@ CachedFont.hpp:78:18:virtual void touchgfx::CachedFont::setContextualFormsTable(
 CachedFont.cpp:8:16:virtual const uint8_t* touchgfx::CachedFont::getPixelData(const touchgfx::GlyphNode*) const	0	static
 CachedFont.cpp:50:8:virtual int8_t touchgfx::CachedFont::getKerning(touchgfx::Unicode::UnicodeChar, const touchgfx::GlyphNode*) const	0	static
 CachedFont.hpp:12:7:touchgfx::CachedFont::~CachedFont()	0	static
-CachedFont.cpp:19:18:virtual const touchgfx::GlyphNode* touchgfx::CachedFont::getGlyph(touchgfx::Unicode::UnicodeChar, const uint8_t*&, uint8_t&) const	32	static
 CachedFont.hpp:12:7:virtual touchgfx::CachedFont::~CachedFont()	8	static
 CachedFont.hpp:55:29:virtual const uint16_t* touchgfx::CachedFont::getGSUBTable() const	0	static
 CachedFont.hpp:69:45:virtual const touchgfx::FontContextualFormsTable* touchgfx::CachedFont::getContextualFormsTable() const	0	static
+CachedFont.cpp:19:18:virtual const touchgfx::GlyphNode* touchgfx::CachedFont::getGlyph(touchgfx::Unicode::UnicodeChar, const uint8_t*&, uint8_t&) const	32	static

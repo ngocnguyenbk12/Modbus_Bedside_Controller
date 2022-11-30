@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/STM32TouchController.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/target/STM32TouchController.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/target/STM32TouchController.cpp \
  ../../TouchGFX/target/STM32TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
@@ -52,6 +52,7 @@ Application/User/TouchGFX/target/STM32TouchController.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -174,6 +175,8 @@ Application/User/TouchGFX/target/STM32TouchController.o: \
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
+
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 

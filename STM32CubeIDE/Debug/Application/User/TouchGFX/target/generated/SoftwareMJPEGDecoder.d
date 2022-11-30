@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/SoftwareMJPEGDecoder.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/target/generated/SoftwareMJPEGDecoder.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/target/generated/SoftwareMJPEGDecoder.cpp \
  ../../Middlewares/Third_Party/LibJPEG/include/jinclude.h \
  ../../LIBJPEG/Target/jconfig.h ../../LIBJPEG/Target/jdata_conf.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \

@@ -1,5 +1,5 @@
 Application/User/generated/Table_verdana_40_4bpp.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/generated/fonts/src/Table_verdana_40_4bpp.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/generated/fonts/src/Table_verdana_40_4bpp.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

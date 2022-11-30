@@ -1,10 +1,12 @@
 ModelListener.hpp:18:18:virtual void ModelListener::AC_Setnewvalue(short unsigned int)	0	static
-ModelListener.hpp:19:18:virtual void ModelListener::LIGHT_Setnewvalue(uint16_t)	0	static
-ModelListener.hpp:20:18:virtual void ModelListener::RTC_UpdateTime(uint8_t, uint8_t, uint8_t)	0	static
-ModelListener.hpp:21:18:virtual void ModelListener::LIGHT_MB2Light(uint16_t)	0	static
+ModelListener.hpp:19:18:virtual void ModelListener::AC_SetOnOff(bool)	0	static
+ModelListener.hpp:21:18:virtual void ModelListener::LIGHT_Setnewvalue(uint16_t)	0	static
+ModelListener.hpp:22:18:virtual void ModelListener::RTC_UpdateTime(uint8_t, uint8_t, uint8_t)	0	static
+ModelListener.hpp:23:18:virtual void ModelListener::LIGHT_MB2Light(uint16_t)	0	static
 TIME_SETTINGPresenter.hpp:28:13:TIME_SETTINGPresenter::~TIME_SETTINGPresenter()	0	static
 TIME_SETTINGPresenter.cpp:10:6:virtual void TIME_SETTINGPresenter::activate()	0	static
 TIME_SETTINGPresenter.cpp:20:6:virtual void TIME_SETTINGPresenter::Test_Action()	0	static
 TIME_SETTINGPresenter.hpp:28:13:virtual TIME_SETTINGPresenter::~TIME_SETTINGPresenter()	8	static
 TIME_SETTINGPresenter.hpp:28:13:virtual void* TIME_SETTINGPresenter::_ZThn4_N21TIME_SETTINGPresenterD1Ev()	0	static
+TIME_SETTINGPresenter.hpp:28:13:virtual void* TIME_SETTINGPresenter::_ZThn4_N21TIME_SETTINGPresenterD0Ev()	16	static
 TIME_SETTINGPresenter.cpp:4:1:TIME_SETTINGPresenter::TIME_SETTINGPresenter(TIME_SETTINGView&)	8	static

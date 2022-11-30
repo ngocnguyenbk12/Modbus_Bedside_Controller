@@ -20,7 +20,7 @@ public:
     virtual void AC_TempHigh();
     virtual void AC_TempMed();
     virtual void AC_TempUpdate(uint16_t Value);
-
+    virtual void AC_OnOffUpdate(bool State);
 protected:
     uint16_t Counter = 20;  
 };

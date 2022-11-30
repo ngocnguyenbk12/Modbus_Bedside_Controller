@@ -1,5 +1,5 @@
 Middlewares/LibJPEG/jcmaster.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Middlewares/Third_Party/LibJPEG/source/jcmaster.c \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/Middlewares/Third_Party/LibJPEG/source/jcmaster.c \
  ../../Middlewares/Third_Party/LibJPEG/include/jinclude.h \
  ../../LIBJPEG/Target/jconfig.h ../../LIBJPEG/Target/jdata_conf.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \

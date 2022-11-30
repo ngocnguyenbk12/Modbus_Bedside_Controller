@@ -1,6 +1,6 @@
 Application/User/LIBJPEG/App/libjpeg.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/LIBJPEG/App/libjpeg.c \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/LIBJPEG/App/libjpeg.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/LIBJPEG/App/libjpeg.c \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/LIBJPEG/App/libjpeg.h \
  ../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h \
  ../../LIBJPEG/Target/jconfig.h ../../LIBJPEG/Target/jdata_conf.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
@@ -16,7 +16,7 @@ Application/User/LIBJPEG/App/libjpeg.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../LIBJPEG/Target/jmorecfg.h
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/LIBJPEG/App/libjpeg.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/LIBJPEG/App/libjpeg.h:
 
 ../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h:
 

@@ -10,12 +10,8 @@
 #include "task.h"
 #include "main.h"
 #include "Modbus.h"
-#include "Modbus_Master.h"
+#include "Modbus_Func.h"
 
-
-
-UART_HandleTypeDef huart1;
-UART_HandleTypeDef huart6;
 
 /**
  * @brief
@@ -29,37 +25,19 @@ UART_HandleTypeDef huart6;
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
 	/* Modbus RTU TX callback BEGIN */
-	if(huart->Instance == USART1)
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	int i;
+	for (i = 0; i < numberHandlers; i++ )
 	{
-		BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-		int i;
-		for (i = 0; i < numberHandlers; i++ )
-		{
-			if (mHandlers[i]->port == huart  )
-			{
-				// notify the end of TX
-				xTaskNotifyFromISR(mHandlers[i]->myTaskModbusAHandle, 0, eNoAction, &xHigherPriorityTaskWoken);
-				break;
-			}
+	   	if (MastermHandler[i]->port == huart  )
+	   	{
+	   		// notify the end of TX
+	   		xTaskNotifyFromISR(MastermHandler[i]->myTaskModbusAHandle, 0, eNoAction, &xHigherPriorityTaskWoken);
+	   		break;
+	   	}
 
-		}
-		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
 	}
-	else if(huart->Instance == USART6)
-	{
-		BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-		int i;
-		for (i = 0; i < numberHandlers; i++ )
-		{
-			if (MastermHandler[i]->port == huart  )
-			{
-				// notify the end of TX
-				xTaskNotifyFromISR(MastermHandler[i]->myTaskModbusAHandle, 0, eNoAction, &xHigherPriorityTaskWoken);
-				break;
-			}
-		}
-		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
-	}
+	portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
 
 	/* Modbus RTU TX callback END */
 
@@ -83,49 +61,26 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	if(UartHandle->Instance == USART1)
-	{
-		/* Modbus RTU RX callback BEGIN */
-		int i;
-		for (i = 0; i < numberHandlers; i++ )
-		{
-			if (mHandlers[i]->port == UartHandle  )
-			{
 
-				if(mHandlers[i]->xTypeHW == USART_HW)
-				{
-					RingAdd(&mHandlers[i]->xBufferRX, mHandlers[i]->dataRX);
-					HAL_UART_Receive_IT(mHandlers[i]->port, &mHandlers[i]->dataRX, 1);
-					xTimerResetFromISR(mHandlers[i]->xTimerT35, &xHigherPriorityTaskWoken);
-				}
-				break;
-			}
-		}
-		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+	/* Modbus RTU RX callback BEGIN */
+    int i;
+    for (i = 0; i < numberHandlers; i++ )
+    {
+    	if (MastermHandler[i]->port == UartHandle  )
+    	{
 
-		/* Modbus RTU RX callback END */
-	}
-	else if(UartHandle->Instance == USART6)
-	{
-		/* Modbus RTU RX callback BEGIN */
-		int i;
-		for (i = 0; i < numberHandlers; i++ )
-		{
-			if (MastermHandler[i]->port == UartHandle  )
-			{
+    		if(MastermHandler[i]->xTypeHW == USART_HW)
+    		{
+    			RingAdd(&MastermHandler[i]->xBufferRX, MastermHandler[i]->dataRX);
+    			HAL_UART_Receive_IT(MastermHandler[i]->port, &MastermHandler[i]->dataRX, 1);
+    			xTimerResetFromISR(MastermHandler[i]->xTimerT35, &xHigherPriorityTaskWoken);
+    		}
+    		break;
+    	}
+    }
+    portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
 
-				if(MastermHandler[i]->xTypeHW == USART_HW)
-				{
-					RingAdd(&MastermHandler[i]->xBufferRX, MastermHandler[i]->dataRX);
-					HAL_UART_Receive_IT(MastermHandler[i]->port, &MastermHandler[i]->dataRX, 1);
-					xTimerResetFromISR(MastermHandler[i]->xTimerT35, &xHigherPriorityTaskWoken);
-				}
-				break;
-			}
-		}
-		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
-	}
-
+	/* Modbus RTU RX callback END */
 
 	/*
 	 * Here you should implement the callback code for other UARTs not used by Modbus
@@ -151,16 +106,16 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 
  for (i = 0; i < numberHandlers; i++ )
  {
-    	if (mHandlers[i]->port == huart  )
+    	if (MastermHandler[i]->port == huart  )
     	{
 
-    		if(mHandlers[i]->xTypeHW == USART_HW_DMA)
+    		if(MastermHandler[i]->xTypeHW == USART_HW_DMA)
     		{
-    			while(HAL_UARTEx_ReceiveToIdle_DMA(mHandlers[i]->port, mHandlers[i]->xBufferRX.uxBuffer, MAX_BUFFER) != HAL_OK)
+    			while(HAL_UARTEx_ReceiveToIdle_DMA(MastermHandler[i]->port, MastermHandler[i]->xBufferRX.uxBuffer, MAX_BUFFER) != HAL_OK)
     		    {
-    					HAL_UART_DMAStop(mHandlers[i]->port);
+    					HAL_UART_DMAStop(MastermHandler[i]->port);
    				}
-				__HAL_DMA_DISABLE_IT(mHandlers[i]->port->hdmarx, DMA_IT_HT); // we don't need half-transfer interrupt
+				__HAL_DMA_DISABLE_IT(MastermHandler[i]->port->hdmarx, DMA_IT_HT); // we don't need half-transfer interrupt
 
     		}
 
@@ -177,25 +132,25 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	    int i;
 	    for (i = 0; i < numberHandlers; i++ )
 	    {
-	    	if (mHandlers[i]->port == huart  )
+	    	if (MastermHandler[i]->port == huart  )
 	    	{
 
 
-	    		if(mHandlers[i]->xTypeHW == USART_HW_DMA)
+	    		if(MastermHandler[i]->xTypeHW == USART_HW_DMA)
 	    		{
 	    			if(Size) //check if we have received any byte
 	    			{
-		    				mHandlers[i]->xBufferRX.u8available = Size;
-		    				mHandlers[i]->xBufferRX.overflow = false;
+		    				MastermHandler[i]->xBufferRX.u8available = Size;
+		    				MastermHandler[i]->xBufferRX.overflow = false;
 
-		    				while(HAL_UARTEx_ReceiveToIdle_DMA(mHandlers[i]->port, mHandlers[i]->xBufferRX.uxBuffer, MAX_BUFFER) != HAL_OK)
+		    				while(HAL_UARTEx_ReceiveToIdle_DMA(MastermHandler[i]->port, MastermHandler[i]->xBufferRX.uxBuffer, MAX_BUFFER) != HAL_OK)
 		    				{
-		    					HAL_UART_DMAStop(mHandlers[i]->port);
+		    					HAL_UART_DMAStop(MastermHandler[i]->port);
 
 		    				}
-		    				__HAL_DMA_DISABLE_IT(mHandlers[i]->port->hdmarx, DMA_IT_HT); // we don't need half-transfer interrupt
+		    				__HAL_DMA_DISABLE_IT(MastermHandler[i]->port->hdmarx, DMA_IT_HT); // we don't need half-transfer interrupt
 
-		    				xTaskNotifyFromISR(mHandlers[i]->myTaskModbusAHandle, 0 , eSetValueWithOverwrite, &xHigherPriorityTaskWoken);
+		    				xTaskNotifyFromISR(MastermHandler[i]->myTaskModbusAHandle, 0 , eSetValueWithOverwrite, &xHigherPriorityTaskWoken);
 	    			}
 	    		}
 

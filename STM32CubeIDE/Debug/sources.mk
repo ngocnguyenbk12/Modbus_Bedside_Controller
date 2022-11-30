@@ -32,6 +32,8 @@ CPP_DEPS :=
 SUBDIRS := \
 Application/User/Core \
 Application/User/LIBJPEG/App \
+Application/User/LWIP/App \
+Application/User/LWIP/Target \
 Application/User/Startup \
 Application/User/TouchGFX/App \
 Application/User/TouchGFX/target \
@@ -44,6 +46,6 @@ Drivers/Components \
 Drivers/STM32F7xx_HAL_Driver \
 Middlewares/FreeRTOS \
 Middlewares/LibJPEG \
+Middlewares/LwIP \
 Middlewares/Modbus/Src \
-Middlewares/Usr_Function/Src \
 

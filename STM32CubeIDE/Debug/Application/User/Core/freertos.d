@@ -1,5 +1,5 @@
 Application/User/Core/freertos.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Core/Src/freertos.c \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -33,6 +33,7 @@ Application/User/Core/freertos.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -116,6 +117,8 @@ Application/User/Core/freertos.o: \
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
+
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 

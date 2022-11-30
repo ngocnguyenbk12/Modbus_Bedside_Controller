@@ -1,5 +1,5 @@
 Application/User/gui/Model.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/gui/src/model/Model.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/gui/src/model/Model.cpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
@@ -39,6 +39,7 @@ Application/User/gui/Model.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -56,15 +57,17 @@ Application/User/gui/Model.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Master.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
- ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus2Gui.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h
 
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 
@@ -144,6 +147,8 @@ Application/User/gui/Model.o: \
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
 
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h:
+
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h:
@@ -178,9 +183,9 @@ Application/User/gui/Model.o: \
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 
@@ -188,10 +193,14 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32Cu
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Master.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus2Gui.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:

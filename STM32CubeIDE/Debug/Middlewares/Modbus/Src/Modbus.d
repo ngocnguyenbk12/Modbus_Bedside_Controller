@@ -53,16 +53,16 @@ Middlewares/Modbus/Src/Modbus.o: ../Middlewares/Modbus/Src/Modbus.c \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_GuiHandler.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Device_Trace.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_GuiHandler.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Device_Trace.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 
@@ -172,9 +172,9 @@ Middlewares/Modbus/Src/Modbus.o: ../Middlewares/Modbus/Src/Modbus.c \
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
@@ -182,12 +182,12 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32Cu
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_GuiHandler.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_GuiHandler.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Device_Trace.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Device_Trace.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:

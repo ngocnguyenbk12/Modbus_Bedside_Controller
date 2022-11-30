@@ -21,3 +21,7 @@ void AC_VIEWPresenter::AC_Setnewvalue(uint16_t Value)
 {
     view.AC_TempUpdate(Value);
 }   
+void AC_VIEWPresenter::AC_SetOnOff(bool State)
+{
+    view.AC_OnOffUpdate(State);
+}   

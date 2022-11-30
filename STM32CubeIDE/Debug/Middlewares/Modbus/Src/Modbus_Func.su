@@ -1,0 +1,8 @@
+Modbus_Func.c:13:10:calcCRC	8	static
+Modbus_Func.c:39:6:RingAdd	0	static
+Modbus_Func.c:83:9:RingCountBytes	0	static
+Modbus_Func.c:88:6:RingClear	0	static
+Modbus_Func.c:65:9:RingGetNBytes	16	static
+Modbus_Func.c:59:9:RingGetAllBytes	8	static
+Modbus_Func.c:97:6:ModbusQuery	8	static
+Modbus_Func.c:112:6:ModbusQueryInject	16	static

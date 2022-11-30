@@ -9,8 +9,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Middlewares/Usr_Function/Src/subdir.mk
 -include Middlewares/Modbus/Src/subdir.mk
+-include Middlewares/LwIP/subdir.mk
 -include Middlewares/LibJPEG/subdir.mk
 -include Middlewares/FreeRTOS/subdir.mk
 -include Drivers/STM32F7xx_HAL_Driver/subdir.mk
@@ -23,6 +23,8 @@ RM := rm -rf
 -include Application/User/TouchGFX/target/subdir.mk
 -include Application/User/TouchGFX/App/subdir.mk
 -include Application/User/Startup/subdir.mk
+-include Application/User/LWIP/Target/subdir.mk
+-include Application/User/LWIP/App/subdir.mk
 -include Application/User/LIBJPEG/App/subdir.mk
 -include Application/User/Core/subdir.mk
 -include objects.mk
@@ -88,8 +90,8 @@ all: main-build
 main-build: STM32F746G_DISCO.elf secondary-outputs
 
 # Tool invocations
-STM32F746G_DISCO.elf: $(OBJS) $(USER_OBJS) D:\LV_Modbus\Project\Git_Master_Implementation\Modbus_Bedside_Controller\STM32CubeIDE\STM32F746NGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F746G_DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\LV_Modbus\Project\Git_Master_Implementation\Modbus_Bedside_Controller\STM32CubeIDE\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F746G_DISCO.map" -Wl,--gc-sections -static -LC:/Dev/STM32F746-DISCO/stm32f746g_disco/STM32F746G_DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LC:/git/STM32F746-dk/stm32f746g_disco/STM32F746G_DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LC:/dev/pacman/at/stm32f746g_disco/STM32F746G_DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/LV_Modbus/Project/TouchGFX_v2_Rework/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/LV_Modbus/Project/Git/Modbus_Bedside_Controller/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32F746G_DISCO.elf: $(OBJS) $(USER_OBJS) D:\LV_Modbus\Project\DualPort\Modbus_Bedside_Controller\STM32CubeIDE\STM32F746NGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32F746G_DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\LV_Modbus\Project\DualPort\Modbus_Bedside_Controller\STM32CubeIDE\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F746G_DISCO.map" -Wl,--gc-sections -static -LC:/Dev/STM32F746-DISCO/stm32f746g_disco/STM32F746G_DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LC:/git/STM32F746-dk/stm32f746g_disco/STM32F746G_DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LC:/dev/pacman/at/stm32f746g_disco/STM32F746G_DISCO/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/LV_Modbus/Project/TouchGFX_v2_Rework/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/LV_Modbus/Project/Git/Modbus_Bedside_Controller/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

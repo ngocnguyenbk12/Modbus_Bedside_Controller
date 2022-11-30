@@ -1,5 +1,5 @@
 Application/User/gui/TIME_SETTINGPresenter.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/gui/src/time_setting_screen/TIME_SETTINGPresenter.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/gui/src/time_setting_screen/TIME_SETTINGPresenter.cpp \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

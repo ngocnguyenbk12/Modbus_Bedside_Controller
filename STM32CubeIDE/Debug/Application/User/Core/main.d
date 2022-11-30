@@ -1,5 +1,5 @@
 Application/User/Core/main.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/Core/Src/main.c \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
@@ -24,6 +24,7 @@ Application/User/Core/main.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -55,19 +56,54 @@ Application/User/Core/main.o: \
  ../../LIBJPEG/App/libjpeg.h \
  ../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h \
  ../../LIBJPEG/Target/jconfig.h ../../LIBJPEG/Target/jdata_conf.h \
- ../../LIBJPEG/Target/jmorecfg.h ../../TouchGFX/App/app_touchgfx.h \
+ ../../LIBJPEG/Target/jmorecfg.h ../../LWIP/App/lwip.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
+ ../../LWIP/Target/lwipopts.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/debug.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/arch.h \
+ ../../Middlewares/Third_Party/LwIP/system/arch/cc.h \
+ ../../Middlewares/Third_Party/LwIP/system/arch/cpu.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/mem.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/memp.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_std.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/mem_priv.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/stats.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/netif/etharp.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/etharp.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/err.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/ip4_addr.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/netif.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/ip_addr.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/ip6_addr.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/ip4.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip4.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ethernet.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ieee.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/etharp.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/netif/ethernet.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/dhcp.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h \
+ ../../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h \
+ ../../LWIP/Target/ethernetif.h \
+ ../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h \
+ ../../TouchGFX/App/app_touchgfx.h \
  ../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h \
  ../../Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Master.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
- ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 
 ../../Core/Inc/main.h:
 
@@ -116,6 +152,8 @@ Application/User/Core/main.o: \
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
+
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h:
 
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 
@@ -183,15 +221,85 @@ Application/User/Core/main.o: \
 
 ../../LIBJPEG/Target/jmorecfg.h:
 
+../../LWIP/App/lwip.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h:
+
+../../LWIP/Target/lwipopts.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/debug.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/arch.h:
+
+../../Middlewares/Third_Party/LwIP/system/arch/cc.h:
+
+../../Middlewares/Third_Party/LwIP/system/arch/cpu.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/mem.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/memp.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_std.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/mem_priv.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/stats.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/netif/etharp.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/etharp.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/err.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/ip4_addr.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/def.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/netif.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/ip_addr.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/ip6_addr.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/def.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/ip4.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip4.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ethernet.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ieee.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/etharp.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/netif/ethernet.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/dhcp.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h:
+
+../../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h:
+
+../../LWIP/Target/ethernetif.h:
+
+../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h:
+
 ../../TouchGFX/App/app_touchgfx.h:
 
 ../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h:
 
 ../../Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/ModbusConfig.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 
@@ -199,12 +307,12 @@ D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32Cu
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Master.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h:
 
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-
-D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus_Cfg.h:

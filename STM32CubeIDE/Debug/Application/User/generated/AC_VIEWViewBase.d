@@ -1,5 +1,5 @@
 Application/User/generated/AC_VIEWViewBase.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/generated/gui_generated/src/ac_view_screen/AC_VIEWViewBase.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/generated/gui_generated/src/ac_view_screen/AC_VIEWViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/ac_view_screen/AC_VIEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

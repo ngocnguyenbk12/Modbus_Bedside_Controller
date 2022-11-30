@@ -1,5 +1,5 @@
 Application/User/generated/SERVICE_VIEWViewBase.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/generated/gui_generated/src/service_view_screen/SERVICE_VIEWViewBase.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/generated/gui_generated/src/service_view_screen/SERVICE_VIEWViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/service_view_screen/SERVICE_VIEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

@@ -1,15 +1,1 @@
-Modbus.c:453:6:vTimerCallbackT35	24	static
-Modbus.c:472:6:vTimerCallbackTimeout	16	static
-Modbus.c:1523:13:sendTxBuffer	32	static
-Modbus.c:1050:6:StartTaskModbusMaster	88	static
-Modbus.c:636:6:StartTaskModbusSlave	144	static
-Modbus.c:128:6:RingAdd	0	static
-Modbus.c:147:9:RingGetAllBytes	8	static
-Modbus.c:153:9:RingGetNBytes	8	static
-Modbus.c:171:9:RingCountBytes	0	static
-Modbus.c:176:6:RingClear	0	static
-Modbus.c:209:6:ModbusInit	24	static
-Modbus.c:327:6:ModbusStart	8	static
-Modbus.c:776:6:ModbusQuery	16	static
-Modbus.c:791:6:ModbusQueryInject	16	static
-Modbus.c:1464:10:calcCRC	8	static
+Modbus.c:103:10:calcCRC	8	static

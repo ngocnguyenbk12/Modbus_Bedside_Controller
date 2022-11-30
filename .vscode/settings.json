@@ -15,6 +15,15 @@
         "main.h": "c",
         "modbus_cfg.h": "c",
         "modbus_gpio.h": "c",
-        "stm32f7xx_hal_gpio.h": "c"
+        "stm32f7xx_hal_gpio.h": "c",
+        "cmsis_os.h": "c",
+        "modbusdevice.h": "c",
+        "task.h": "c",
+        "tcp_slave_function.h": "c",
+        "modbus_func.h": "c",
+        "queue.h": "c",
+        "timers.h": "c",
+        "stdbool.h": "c",
+        "modbus2gui.h": "c"
     }
 }

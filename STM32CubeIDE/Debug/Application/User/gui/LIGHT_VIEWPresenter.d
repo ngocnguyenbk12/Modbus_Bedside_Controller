@@ -1,5 +1,5 @@
 Application/User/gui/LIGHT_VIEWPresenter.o: \
- D:/LV_Modbus/Project/Git_Master_Implementation/Modbus_Bedside_Controller/TouchGFX/gui/src/light_view_screen/LIGHT_VIEWPresenter.cpp \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/TouchGFX/gui/src/light_view_screen/LIGHT_VIEWPresenter.cpp \
  ../../TouchGFX/gui/include/gui/light_view_screen/LIGHT_VIEWView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/light_view_screen/LIGHT_VIEWViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

@@ -21,14 +21,20 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "libjpeg.h"
+#include "lwip.h"
 #include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
 #include "Modbus.h"
-#include "Modbus_Master.h"
-#include "Modbus_Cfg.h"
+#include "ModbusDevice.h"
+#include "semphr.h"
+#include "cmsis_os.h"
+#include "stm32f7xx_hal.h"
+#include "FreeRTOS.h"
+#include "queue.h"
+#include "task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -84,7 +90,7 @@ SDRAM_HandleTypeDef hsdram1;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for TouchGFXTask */
@@ -129,10 +135,6 @@ extern void videoTaskFunc(void *argument);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 /**------------------------ Variables ---------------------------**/
-modbusHandler_t ModbusH;
-uint16_t ModbusDATA[10];
-DeviceType Slave_Data[MODBUS_SLAVE_DEVICE_MAX];
-DeviceCoil_Type Coil_Data[MODBUS_SLAVE_COIL_MAX];
 
 
 
@@ -189,52 +191,12 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  /* Modbus Slave initialization */
-  ModbusH.uModbusType = MB_SLAVE;
-  ModbusH.port =  &huart1; // This is the UART port connected to STLINK in the NUCLEO F429
-  ModbusH.u8id = 1; //slave ID
-  ModbusH.u16timeOut = 1000;
-  ModbusH.EN_Port = NULL; // No RS485
-    //ModbusH2.EN_Port = LD2_GPIO_Port; // RS485 Enable
-    //ModbusH2.EN_Pin = LD2_Pin; // RS485 Enable
-  ModbusH.u16regs = ModbusDATA;
-  ModbusH.u16regsize= sizeof(ModbusDATA)/sizeof(ModbusDATA[0]);
-  ModbusH.xTypeHW = USART_HW;
-  
-  ModbusH.Device = Slave_Data;
-  ModbusH.Device[1].Addr = DEVICE_3;
-  ModbusH.Device[1].Value = 245;
-  ModbusH.Device[2].Addr = TEMP_ADDRESS;
-  ModbusH.Device[2].Value = 22;
-
-  ModbusH.CoilDevice = Coil_Data;
-  ModbusH.CoilDevice[0].Addr = LIGHT_0_ADDRESS;
-  ModbusH.CoilDevice[0].Value = false;
-
-  ModbusH.CoilDevice[1].Addr = LIGHT_1_ADDRESS;
-  ModbusH.CoilDevice[1].Value = false;
-
-  ModbusH.CoilDevice[2].Addr = LIGHT_2_ADDRESS;
-  ModbusH.CoilDevice[2].Value = false;
-
-  ModbusH.CoilDevice[3].Addr = LIGHT_3_ADDRESS;
-  ModbusH.CoilDevice[3].Value = false;
-
-  ModbusH.CoilDevice[4].Addr = LIGHT_4_ADDRESS;
-  ModbusH.CoilDevice[4].Value = false;
-  
-
-    // Initialize Modbus library
-  ModbusInit(&ModbusH);
-  // Start capturing traffic on serial Port
-  ModbusStart(&ModbusH);
 
 
-
-
+  SModbus_Init();
   MMaster_Init();
-   DBGMCU->APB1FZ = 0xFFFFFFFF;
- DBGMCU->APB2FZ = 0xFFFFFFFF;
+  DBGMCU->APB1FZ = 0xFFFFFFFF;
+  DBGMCU->APB2FZ = 0xFFFFFFFF;
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -789,9 +751,9 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
+  __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOJ_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOK_CLK_ENABLE();
@@ -808,7 +770,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, GPIO_PIN_7|GPIO_PIN_6|GPIO_PIN_10|GPIO_PIN_9
-                          |GPIO_PIN_8, GPIO_PIN_SET);
+                          |GPIO_PIN_8, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
@@ -858,11 +820,28 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
+  /* init code for LWIP */
+  MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
   {
-    osDelay(100);
+    osDelay(1);
+	if(xSemaphoreTake((QueueHandle_t)Master_Modbus.ModBusSphrHandle , 300)==pdTRUE)
+	{
+		modbus_t telegram[1];
+		telegram[0].u8id = 1; // slave address
+		telegram[0].u8fct = MB_FC_READ_REGISTERS; // function code (this one is registers write)
+		telegram[0].u16RegAdd = 0x0;
+		telegram[0].u16CoilsNo = 1; // number of elements (coils or registers) to read
+		telegram[0].u16reg = Master_ModbusData; // pointer to a memory array
+		ModbusQuery(&Master_Modbus, telegram[0]);
+		//if(reg != ModbusDATARX[0])
+		//{
+		// reg = Master_ModbusData[0];
+		// }
+		xSemaphoreGive((QueueHandle_t)Master_Modbus.ModBusSphrHandle);
+	}
   }
   /* USER CODE END 5 */
 }
