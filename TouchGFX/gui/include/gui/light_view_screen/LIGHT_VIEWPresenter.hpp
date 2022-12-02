@@ -30,6 +30,12 @@ public:
     void LIGHT_Setnewvalue(uint16_t pin);
     void LIGHT_MB2Light(uint16_t pin);
 
+    void LIGHT_Setnewvalue_0(bool State);
+    void LIGHT_Setnewvalue_1(bool State); 
+    void LIGHT_Setnewvalue_2(bool State);
+    void LIGHT_Setnewvalue_3(bool State);
+    void LIGHT_Setnewvalue_4(bool State);
+
 private:
     LIGHT_VIEWPresenter();
 

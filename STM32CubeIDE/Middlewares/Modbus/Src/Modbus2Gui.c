@@ -8,6 +8,42 @@ void Queue_CoilUpdate(Device_Coil *Coil)
         CoilVal = Coil->Value;
         xQueueSend(Q_Mb2Gui_AcOnOff,&CoilVal,0);
     }
+
+
+
+/**     Update for GPIO       */
+    if(Coil->Addr == GPIO_0_ADDR)
+    {
+        CoilVal = Coil->Value;
+        xQueueSend(Q_Mb2Gui_Gpio0,&CoilVal,0);
+        WriteGpio(GPIO_0_PIN,Coil->Value);
+    }
+    if(Coil->Addr == GPIO_1_ADDR)
+    {
+        CoilVal = Coil->Value;
+        xQueueSend(Q_Mb2Gui_Gpio1,&CoilVal,0);
+        WriteGpio(GPIO_1_PIN,Coil->Value);
+    }
+    if(Coil->Addr == GPIO_2_ADDR)
+    {
+        CoilVal = Coil->Value;
+        xQueueSend(Q_Mb2Gui_Gpio2,&CoilVal,0);
+        WriteGpio(GPIO_2_PIN,Coil->Value);
+    }
+    if(Coil->Addr == GPIO_3_ADDR)
+    {
+        CoilVal = Coil->Value;
+        xQueueSend(Q_Mb2Gui_Gpio3,&CoilVal,0);
+        WriteGpio(GPIO_3_PIN,Coil->Value);
+    }
+    if(Coil->Addr == GPIO_4_ADDR)
+    {
+        CoilVal = Coil->Value;
+        xQueueSend(Q_Mb2Gui_Gpio4,&CoilVal,0);
+        WriteGpio(GPIO_4_PIN,Coil->Value);
+    }
+
+
 }
 
 

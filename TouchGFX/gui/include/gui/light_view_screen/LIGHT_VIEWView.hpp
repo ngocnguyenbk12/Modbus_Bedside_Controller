@@ -19,6 +19,12 @@ public:
     virtual void Light_Button4();
     virtual void LIGHT_Updater(uint16_t pin);
     virtual void Light_Updater(uint16_t pin);
+
+    virtual void LIGHT_Update_0(bool State);
+    virtual void LIGHT_Update_1(bool State);
+    virtual void LIGHT_Update_2(bool State);
+    virtual void LIGHT_Update_3(bool State);
+    virtual void LIGHT_Update_4(bool State);
 protected:
 };
 

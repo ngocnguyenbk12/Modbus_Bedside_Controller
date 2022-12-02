@@ -240,6 +240,8 @@
 "./Middlewares/LwIP/utils.o"
 "./Middlewares/LwIP/vj.o"
 "./Middlewares/LwIP/zepif.o"
+"./Middlewares/Modbus/Src/Master_Polling.o"
+"./Middlewares/Modbus/Src/Modbus2Gpio.o"
 "./Middlewares/Modbus/Src/Modbus2Gui.o"
 "./Middlewares/Modbus/Src/Modbus_DeviceTrace.o"
 "./Middlewares/Modbus/Src/Modbus_Func.o"

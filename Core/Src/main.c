@@ -35,6 +35,8 @@
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "task.h"
+
+#include "Master_Polling.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -826,22 +828,8 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
-	if(xSemaphoreTake((QueueHandle_t)Master_Modbus.ModBusSphrHandle , 300)==pdTRUE)
-	{
-		modbus_t telegram[1];
-		telegram[0].u8id = 1; // slave address
-		telegram[0].u8fct = MB_FC_READ_REGISTERS; // function code (this one is registers write)
-		telegram[0].u16RegAdd = 0x0;
-		telegram[0].u16CoilsNo = 1; // number of elements (coils or registers) to read
-		telegram[0].u16reg = Master_ModbusData; // pointer to a memory array
-		ModbusQuery(&Master_Modbus, telegram[0]);
-		//if(reg != ModbusDATARX[0])
-		//{
-		// reg = Master_ModbusData[0];
-		// }
-		xSemaphoreGive((QueueHandle_t)Master_Modbus.ModBusSphrHandle);
-	}
+    osDelay(1000);
+    Master_Polling();
   }
   /* USER CODE END 5 */
 }

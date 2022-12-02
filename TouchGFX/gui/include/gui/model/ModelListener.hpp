@@ -18,6 +18,14 @@ public:
     virtual void AC_Setnewvalue(unsigned short Value) {}
     virtual void AC_SetOnOff(bool State) {}
 
+    /*  GPIO Function   */
+    virtual void LIGHT_Setnewvalue_0(bool State) {}
+    virtual void LIGHT_Setnewvalue_1(bool State) {}
+    virtual void LIGHT_Setnewvalue_2(bool State) {}
+    virtual void LIGHT_Setnewvalue_3(bool State) {}
+    virtual void LIGHT_Setnewvalue_4(bool State) {}
+
+
     virtual void LIGHT_Setnewvalue(uint16_t pin) {}
     virtual void RTC_UpdateTime(uint8_t hour, uint8_t minute, uint8_t second) {}
     virtual void LIGHT_MB2Light(uint16_t pin) {}

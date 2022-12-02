@@ -154,39 +154,43 @@ void SModbus_Init(void)
 
 	Slave_Modbus.Device->Coil[0].Addr = 0x0000;
 	Slave_Modbus.Device->Coil[0].Value = true;
-
 	Slave_Modbus.Device->Coil[1].Addr = 0x0001;
 	Slave_Modbus.Device->Coil[1].Value = true;
-
 	Slave_Modbus.Device->Coil[2].Addr = 0x0002;
 	Slave_Modbus.Device->Coil[2].Value = true;
-
 	Slave_Modbus.Device->Coil[3].Addr = 0x0003;
 	Slave_Modbus.Device->Coil[3].Value = true;
-
 	Slave_Modbus.Device->Coil[4].Addr = 0x0004;
 	Slave_Modbus.Device->Coil[4].Value = true;
-
-
-
-	Slave_Modbus.Device->Coil[5].Addr = AC_ONOFF_STATE_ADDR;
-	Slave_Modbus.Device->Coil[5].Value = false;
-
 	Slave_Modbus.Device->Reg[0].Addr = 30000;
 	Slave_Modbus.Device->Reg[1].Addr = 30001;
 	Slave_Modbus.Device->Reg[2].Addr = 30002;
 	Slave_Modbus.Device->Reg[3].Addr = 30003;
 	Slave_Modbus.Device->Reg[4].Addr = 30004;
-
 	Slave_Modbus.Device->Reg[0].Value = 0x0020;
 	Slave_Modbus.Device->Reg[1].Value = 0x0010;
 	Slave_Modbus.Device->Reg[2].Value = 0x0020;
 	Slave_Modbus.Device->Reg[3].Value = 0x0040;
 	Slave_Modbus.Device->Reg[4].Value = 0xff20;
 
+
+
+
+	Slave_Modbus.Device->Coil[5].Addr = AC_ONOFF_STATE_ADDR;
+	Slave_Modbus.Device->Coil[5].Value = false;
 	Slave_Modbus.Device->Reg[5].Addr = AC_TEMP_VALUE_ADDR;
 	Slave_Modbus.Device->Reg[5].Value = 22;
 
+	Slave_Modbus.Device->Coil[6].Addr = GPIO_0_ADDR;
+	Slave_Modbus.Device->Coil[6].Value = false;
+	Slave_Modbus.Device->Coil[7].Addr = GPIO_1_ADDR;
+	Slave_Modbus.Device->Coil[7].Value = false;
+	Slave_Modbus.Device->Coil[8].Addr = GPIO_2_ADDR;
+	Slave_Modbus.Device->Coil[8].Value = false;
+	Slave_Modbus.Device->Coil[9].Addr = GPIO_3_ADDR;
+	Slave_Modbus.Device->Coil[9].Value = false;
+	Slave_Modbus.Device->Coil[10].Addr = GPIO_4_ADDR;
+	Slave_Modbus.Device->Coil[10].Value = false;
 
 	ModbusInit(&Slave_Modbus);
 	ModbusStart(&Slave_Modbus);

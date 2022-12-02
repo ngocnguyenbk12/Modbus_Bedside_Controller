@@ -111,7 +111,9 @@ Application/User/gui/LIGHT_VIEWView.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus2Gpio.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h
 
 ../../TouchGFX/gui/include/gui/light_view_screen/LIGHT_VIEWView.hpp:
 
@@ -336,3 +338,7 @@ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 
 D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus2Gpio.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:

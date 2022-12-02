@@ -29,6 +29,20 @@
 xQueueHandle Q_Mb2Gui_AcOnOff;
 xQueueHandle Q_Mb2Gui_AcTempUpdate;
 
+xQueueHandle Q_Mb2Gui_Gpio0;
+xQueueHandle Q_Mb2Gui_Gpio1;
+xQueueHandle Q_Mb2Gui_Gpio2;
+xQueueHandle Q_Mb2Gui_Gpio3;
+xQueueHandle Q_Mb2Gui_Gpio4;
+
+
+xQueueHandle Q_Mb2Gui_SlaveRead_0;
+xQueueHandle Q_Mb2Gui_SlaveRead_1;
+xQueueHandle Q_Mb2Gui_SlaveRead_2;
+xQueueHandle Q_Mb2Gui_SlaveRead_3;
+xQueueHandle Q_Mb2Gui_SlaveRead_4;
+
+
 
 void Queue_CoilUpdate(Device_Coil *Coil);
 void Queue_RegUpdate(Device_Reg *Reg);

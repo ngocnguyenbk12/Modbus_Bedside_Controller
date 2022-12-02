@@ -892,6 +892,55 @@
             }
           }
         ]
+      },
+      {
+        "Name": "SLAVE_VIEW",
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "tiledImage1",
+            "Width": 480,
+            "Height": 272,
+            "FileName": "__designer\\Blue_Textures_binding_light.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "BACK",
+            "X": 310,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_O3EI",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SERVIEC_2_MAIN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BACK"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MAIN_MENU"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],

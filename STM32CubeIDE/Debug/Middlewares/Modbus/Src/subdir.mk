@@ -5,6 +5,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Middlewares/Modbus/Src/Master_Polling.c \
+../Middlewares/Modbus/Src/Modbus2Gpio.c \
 ../Middlewares/Modbus/Src/Modbus2Gui.c \
 ../Middlewares/Modbus/Src/Modbus_DeviceTrace.c \
 ../Middlewares/Modbus/Src/Modbus_Func.c \
@@ -14,6 +16,8 @@ C_SRCS += \
 ../Middlewares/Modbus/Src/UARTCallback.c 
 
 C_DEPS += \
+./Middlewares/Modbus/Src/Master_Polling.d \
+./Middlewares/Modbus/Src/Modbus2Gpio.d \
 ./Middlewares/Modbus/Src/Modbus2Gui.d \
 ./Middlewares/Modbus/Src/Modbus_DeviceTrace.d \
 ./Middlewares/Modbus/Src/Modbus_Func.d \
@@ -23,6 +27,8 @@ C_DEPS += \
 ./Middlewares/Modbus/Src/UARTCallback.d 
 
 OBJS += \
+./Middlewares/Modbus/Src/Master_Polling.o \
+./Middlewares/Modbus/Src/Modbus2Gpio.o \
 ./Middlewares/Modbus/Src/Modbus2Gui.o \
 ./Middlewares/Modbus/Src/Modbus_DeviceTrace.o \
 ./Middlewares/Modbus/Src/Modbus_Func.o \
@@ -39,7 +45,7 @@ Middlewares/Modbus/Src/%.o: ../Middlewares/Modbus/Src/%.c Middlewares/Modbus/Src
 clean: clean-Middlewares-2f-Modbus-2f-Src
 
 clean-Middlewares-2f-Modbus-2f-Src:
-	-$(RM) ./Middlewares/Modbus/Src/Modbus2Gui.d ./Middlewares/Modbus/Src/Modbus2Gui.o ./Middlewares/Modbus/Src/Modbus_DeviceTrace.d ./Middlewares/Modbus/Src/Modbus_DeviceTrace.o ./Middlewares/Modbus/Src/Modbus_Func.d ./Middlewares/Modbus/Src/Modbus_Func.o ./Middlewares/Modbus/Src/Modbus_Master.d ./Middlewares/Modbus/Src/Modbus_Master.o ./Middlewares/Modbus/Src/Modbus_Slave.d ./Middlewares/Modbus/Src/Modbus_Slave.o ./Middlewares/Modbus/Src/TCP_Slave_Function.d ./Middlewares/Modbus/Src/TCP_Slave_Function.o ./Middlewares/Modbus/Src/UARTCallback.d ./Middlewares/Modbus/Src/UARTCallback.o
+	-$(RM) ./Middlewares/Modbus/Src/Master_Polling.d ./Middlewares/Modbus/Src/Master_Polling.o ./Middlewares/Modbus/Src/Modbus2Gpio.d ./Middlewares/Modbus/Src/Modbus2Gpio.o ./Middlewares/Modbus/Src/Modbus2Gui.d ./Middlewares/Modbus/Src/Modbus2Gui.o ./Middlewares/Modbus/Src/Modbus_DeviceTrace.d ./Middlewares/Modbus/Src/Modbus_DeviceTrace.o ./Middlewares/Modbus/Src/Modbus_Func.d ./Middlewares/Modbus/Src/Modbus_Func.o ./Middlewares/Modbus/Src/Modbus_Master.d ./Middlewares/Modbus/Src/Modbus_Master.o ./Middlewares/Modbus/Src/Modbus_Slave.d ./Middlewares/Modbus/Src/Modbus_Slave.o ./Middlewares/Modbus/Src/TCP_Slave_Function.d ./Middlewares/Modbus/Src/TCP_Slave_Function.o ./Middlewares/Modbus/Src/UARTCallback.d ./Middlewares/Modbus/Src/UARTCallback.o
 
 .PHONY: clean-Middlewares-2f-Modbus-2f-Src
 

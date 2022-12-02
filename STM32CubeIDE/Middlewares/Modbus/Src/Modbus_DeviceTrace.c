@@ -41,12 +41,15 @@ void Write_Coil(uint16_t Addr, uint16_t Value, modbusHandler_t *modH)
 }
 void Write_Reg(uint16_t Addr, uint16_t Value, modbusHandler_t *modH)
 {
+    Device_Reg  Reg;
     for(int i = 0; i < MODBUS_SLAVE_REG_NUM ; i++)
     {
         if(Addr == modH->Device->Reg[i].Addr)
         {
+            Reg.Addr = Addr;
+            Reg.Value = Value;
             modH->Device->Reg[i].Value = Value;
-            Queue_RegUpdate(modH->Device->Reg);
+            Queue_RegUpdate(&Reg);
         }
     } 
 }

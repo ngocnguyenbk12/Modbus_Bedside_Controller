@@ -61,6 +61,9 @@
     <Text Id="__SingleUse_B11L" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
+    <Text Id="__SingleUse_O3EI" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">BACK</Translation>
+    </Text>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" FallbackCharacter="?" />

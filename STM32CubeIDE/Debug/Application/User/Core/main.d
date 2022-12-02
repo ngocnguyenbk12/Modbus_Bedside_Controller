@@ -103,7 +103,10 @@ Application/User/Core/main.o: \
  D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Config/Modbus_DeviceCfg.h \
  D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/ModbusDevice.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
- ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Master_Polling.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h \
+ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus2Gui.h
 
 ../../Core/Inc/main.h:
 
@@ -316,3 +319,9 @@ D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Master_Polling.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus.h:
+
+D:/LV_Modbus/Project/DualPort/Modbus_Bedside_Controller/STM32CubeIDE/Middlewares/Modbus/Inc/Modbus2Gui.h:

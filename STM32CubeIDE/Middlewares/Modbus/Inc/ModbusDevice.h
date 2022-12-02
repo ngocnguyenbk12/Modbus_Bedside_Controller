@@ -10,12 +10,12 @@ extern UART_HandleTypeDef huart1;
 
 
 
-#define MODBUS_SLAVE_DEVICE_NUM     10
-#define MODBUS_SLAVE_COIL_NUM       10
-#define MODBUS_SLAVE_REG_NUM        10
+#define MODBUS_SLAVE_DEVICE_NUM     20
+#define MODBUS_SLAVE_COIL_NUM       20
+#define MODBUS_SLAVE_REG_NUM        20
 
-#define MODBUS_MASTER_REG_NUM       10
-#define MODBUS_MASTER_COIL_NUM      10
+#define MODBUS_MASTER_REG_NUM       20
+#define MODBUS_MASTER_COIL_NUM      20
 
 
 typedef struct 

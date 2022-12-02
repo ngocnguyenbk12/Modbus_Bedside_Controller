@@ -28,10 +28,18 @@ extern "C"
 
 	extern xQueueHandle Q_Mb2Gui_AcOnOff;
 	extern xQueueHandle Q_Mb2Gui_AcTempUpdate;
+	extern xQueueHandle Q_Mb2Gui_Gpio0;
+	extern xQueueHandle Q_Mb2Gui_Gpio1;
+	extern xQueueHandle Q_Mb2Gui_Gpio2;
+	extern xQueueHandle Q_Mb2Gui_Gpio3;
+	extern xQueueHandle Q_Mb2Gui_Gpio4;
 }
 extern "C" void ModbusQueryInject(modbusHandler_t * modH, modbus_t telegram);
 unsigned short Value ;
+
+
 bool Ac_onoff_Q;
+bool Gpio_TempState;
 
 
 
@@ -41,7 +49,12 @@ Model::Model() : modelListener(0)
 {
 //    Q_Modbus2AC = xQueueGenericCreate(1,1,0);
 //	Q_Modbus2Light = xQueueGenericCreate(1,1,0);
-	Q_Mb2Gui_AcOnOff = xQueueGenericCreate(1,1,0);
+	Q_Mb2Gui_AcOnOff= xQueueGenericCreate(1,1,0);
+	Q_Mb2Gui_Gpio0	= xQueueGenericCreate(1,1,0);
+	Q_Mb2Gui_Gpio1	= xQueueGenericCreate(1,1,0);
+	Q_Mb2Gui_Gpio2	= xQueueGenericCreate(1,1,0);
+	Q_Mb2Gui_Gpio3	= xQueueGenericCreate(1,1,0);
+	Q_Mb2Gui_Gpio4	= xQueueGenericCreate(1,1,0);
 }
 
 void Model::tick()
@@ -52,11 +65,37 @@ void Model::tick()
 	modelListener->RTC_UpdateTime(RTC_Time.Hours, RTC_Time.Minutes, RTC_Time.Seconds);
 
 
-   if(xQueueReceive(Q_Mb2Gui_AcOnOff,&Ac_onoff_Q,0) == pdTRUE)
-   {
-       // Update New value //
-       modelListener->AC_SetOnOff(Ac_onoff_Q);
-   }
+	if(xQueueReceive(Q_Mb2Gui_AcOnOff,&Gpio_TempState,0) == pdTRUE)
+	{
+		// Update New value //
+		modelListener->AC_SetOnOff(Gpio_TempState);
+	}
+
+	if(xQueueReceive(Q_Mb2Gui_Gpio0,&Gpio_TempState,0) == pdTRUE)
+	{
+		// Update New value //
+		modelListener->LIGHT_Setnewvalue_0(Gpio_TempState);
+	}
+	if(xQueueReceive(Q_Mb2Gui_Gpio1,&Gpio_TempState,0) == pdTRUE)
+	{
+		// Update New value //
+		modelListener->LIGHT_Setnewvalue_1(Gpio_TempState);
+	}
+	if(xQueueReceive(Q_Mb2Gui_Gpio2,&Gpio_TempState,0) == pdTRUE)
+	{
+		// Update New value //
+		modelListener->LIGHT_Setnewvalue_2(Gpio_TempState);
+	}
+	if(xQueueReceive(Q_Mb2Gui_Gpio3,&Gpio_TempState,0) == pdTRUE)
+	{
+		// Update New value //
+		modelListener->LIGHT_Setnewvalue_3(Gpio_TempState);
+	}
+	if(xQueueReceive(Q_Mb2Gui_Gpio4,&Gpio_TempState,0) == pdTRUE)
+	{
+		// Update New value //
+		modelListener->LIGHT_Setnewvalue_4(Gpio_TempState);
+	}
 }
 
 void Model::TestAction(void)
