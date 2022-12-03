@@ -164,7 +164,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "SERVICE_VIEW"
+              "ActionComponent": "SLAVE_VIEW"
             }
           },
           {
@@ -925,11 +925,121 @@
             },
             "TextRotation": "0",
             "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SLAVE4_BUTTON",
+            "X": 168,
+            "Y": 176,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SLAVE3_BUTTON",
+            "X": 168,
+            "Y": 138,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SLAVE2_BUTTON",
+            "X": 168,
+            "Y": 100,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SLAVE1_BUTTON",
+            "X": 168,
+            "Y": 62,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SLAVE0_BUTTON",
+            "X": 168,
+            "Y": 24,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Addr4",
+            "X": 37,
+            "Y": 183,
+            "Width": 69,
+            "Height": 50,
+            "TextId": "__SingleUse_XRMD",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Addr3",
+            "X": 37,
+            "Y": 145,
+            "Width": 69,
+            "Height": 25,
+            "TextId": "__SingleUse_042S",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Addr2",
+            "X": 37,
+            "Y": 107,
+            "Width": 69,
+            "Height": 25,
+            "TextId": "__SingleUse_JS0J",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Addr1",
+            "X": 37,
+            "Y": 69,
+            "Width": 69,
+            "Height": 25,
+            "TextId": "__SingleUse_BOU2",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Addr0",
+            "X": 37,
+            "Y": 31,
+            "Width": 69,
+            "Height": 25,
+            "TextId": "__SingleUse_C300",
+            "TextRotation": "0",
+            "AutoSize": true
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "SERVIEC_2_MAIN",
+            "InteractionName": "SLAVE_2_MAIN",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "BACK"
@@ -938,6 +1048,61 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "MAIN_MENU"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SLAVE0_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Slave_Button0"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SLAVE1_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Slave_Button1"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SLAVE2_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Slave_Button2"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SLAVE3_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Slave_Button3"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SLAVE4_BUTTON"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Slave_Button4"
             }
           }
         ]

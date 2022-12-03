@@ -26,6 +26,10 @@
         "stdbool.h": "c",
         "modbus2gui.h": "c",
         "modbus2gpio.h": "c",
-        "master_polling.h": "c"
+        "master_polling.h": "c",
+        "modbus_devicecfg.h": "c",
+        "modbus_devicetrace.h": "c",
+        "rtu_master_function.h": "c",
+        "semphr.h": "c"
     }
 }

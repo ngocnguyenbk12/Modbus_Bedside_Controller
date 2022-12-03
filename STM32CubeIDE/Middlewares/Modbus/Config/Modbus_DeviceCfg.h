@@ -19,3 +19,19 @@
 
 #define GPIO_PORT               GPIOF
 
+
+
+
+#define SLAVE_0_ADDR            8000
+#define SLAVE_1_ADDR            8001
+#define SLAVE_2_ADDR            8002
+#define SLAVE_3_ADDR            8003
+#define SLAVE_4_ADDR            8004
+
+
+#define SLAVE_10_ADDR           35000
+#define SLAVE_11_ADDR           35002
+#define SLAVE_12_ADDR           35004
+#define SLAVE_13_ADDR           35006
+#define SLAVE_14_ADDR           35008
+

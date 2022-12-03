@@ -22,6 +22,8 @@
 #include <gui/service_view_screen/SERVICE_VIEWPresenter.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGView.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGPresenter.hpp>
+#include <gui/slave_view_screen/SLAVE_VIEWView.hpp>
+#include <gui/slave_view_screen/SLAVE_VIEWPresenter.hpp>
 
 
 /**
@@ -49,7 +51,8 @@ public:
             touchgfx::meta::TypeList< LIGHT_VIEWView,
             touchgfx::meta::TypeList< SERVICE_VIEWView,
             touchgfx::meta::TypeList< TIME_SETTINGView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< SLAVE_VIEWView,
+            touchgfx::meta::Nil > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -66,7 +69,8 @@ public:
             touchgfx::meta::TypeList< LIGHT_VIEWPresenter,
             touchgfx::meta::TypeList< SERVICE_VIEWPresenter,
             touchgfx::meta::TypeList< TIME_SETTINGPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< SLAVE_VIEWPresenter,
+            touchgfx::meta::Nil > > > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -19,6 +19,8 @@
 #include <gui/service_view_screen/SERVICE_VIEWPresenter.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGView.hpp>
 #include <gui/time_setting_screen/TIME_SETTINGPresenter.hpp>
+#include <gui/slave_view_screen/SLAVE_VIEWView.hpp>
+#include <gui/slave_view_screen/SLAVE_VIEWPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -76,19 +78,6 @@ void FrontendApplicationBase::gotoLIGHT_VIEWScreenNoTransitionImpl()
     touchgfx::makeTransition<LIGHT_VIEWView, LIGHT_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// SERVICE_VIEW
-
-void FrontendApplicationBase::gotoSERVICE_VIEWScreenNoTransition()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSERVICE_VIEWScreenNoTransitionImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoSERVICE_VIEWScreenNoTransitionImpl()
-{
-    touchgfx::makeTransition<SERVICE_VIEWView, SERVICE_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
 // TIME_SETTING
 
 void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransition()
@@ -100,4 +89,17 @@ void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransition()
 void FrontendApplicationBase::gotoTIME_SETTINGScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<TIME_SETTINGView, TIME_SETTINGPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// SLAVE_VIEW
+
+void FrontendApplicationBase::gotoSLAVE_VIEWScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSLAVE_VIEWScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSLAVE_VIEWScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<SLAVE_VIEWView, SLAVE_VIEWPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -64,6 +64,21 @@
     <Text Id="__SingleUse_O3EI" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">BACK</Translation>
     </Text>
+    <Text Id="__SingleUse_C300" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 0</Translation>
+    </Text>
+    <Text Id="__SingleUse_042S" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 3</Translation>
+    </Text>
+    <Text Id="__SingleUse_JS0J" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 2</Translation>
+    </Text>
+    <Text Id="__SingleUse_BOU2" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 1</Translation>
+    </Text>
+    <Text Id="__SingleUse_XRMD" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Light 4&#10;</Translation>
+    </Text>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" FallbackCharacter="?" />

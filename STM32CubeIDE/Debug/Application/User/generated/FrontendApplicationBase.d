@@ -75,6 +75,9 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/slave_view_screen/SLAVE_VIEWViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWPresenter.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
@@ -229,6 +232,12 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGPresenter.hpp:
+
+../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWView.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/slave_view_screen/SLAVE_VIEWViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWPresenter.hpp:
 
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 

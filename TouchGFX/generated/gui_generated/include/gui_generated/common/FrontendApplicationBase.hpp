@@ -24,11 +24,11 @@ public:
     // LIGHT_VIEW
     void gotoLIGHT_VIEWScreenNoTransition();
 
-    // SERVICE_VIEW
-    void gotoSERVICE_VIEWScreenNoTransition();
-
     // TIME_SETTING
     void gotoTIME_SETTINGScreenNoTransition();
+
+    // SLAVE_VIEW
+    void gotoSLAVE_VIEWScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -44,11 +44,11 @@ protected:
     // LIGHT_VIEW
     void gotoLIGHT_VIEWScreenNoTransitionImpl();
 
-    // SERVICE_VIEW
-    void gotoSERVICE_VIEWScreenNoTransitionImpl();
-
     // TIME_SETTING
     void gotoTIME_SETTINGScreenNoTransitionImpl();
+
+    // SLAVE_VIEW
+    void gotoSLAVE_VIEWScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

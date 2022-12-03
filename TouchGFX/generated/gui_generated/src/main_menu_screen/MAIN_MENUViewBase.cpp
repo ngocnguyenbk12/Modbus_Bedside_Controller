@@ -87,9 +87,9 @@ void MAIN_MENUViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& sr
     else if (&src == &SERVICE_BUTTON)
     {
         //MAIN_2_SERVICE
-        //When SERVICE_BUTTON clicked change screen to SERVICE_VIEW
-        //Go to SERVICE_VIEW with no screen transition
-        application().gotoSERVICE_VIEWScreenNoTransition();
+        //When SERVICE_BUTTON clicked change screen to SLAVE_VIEW
+        //Go to SLAVE_VIEW with no screen transition
+        application().gotoSLAVE_VIEWScreenNoTransition();
     }
     else if (&src == &AC_BUTTON)
     {

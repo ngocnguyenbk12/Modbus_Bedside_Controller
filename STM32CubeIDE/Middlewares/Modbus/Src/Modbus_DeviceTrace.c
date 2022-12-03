@@ -53,3 +53,33 @@ void Write_Reg(uint16_t Addr, uint16_t Value, modbusHandler_t *modH)
         }
     } 
 }
+
+
+void Master_WriteCoil(uint16_t Addr, uint16_t Value, modbusHandler_t *modH)
+{
+    Device_Coil Coil;
+    for(int i = 0; i < MODBUS_MASTER_COIL_NUM ; i++)
+    {
+        if(Addr == modH->MasterDevice->Coil[i].Addr)
+        {
+            Coil.Addr = Addr;
+            Coil.Value = Value;
+            modH->MasterDevice->Coil[i].Value = Value;
+            Queue_CoilUpdate(&Coil);
+        }
+    }
+}
+void Master_WriteReg(uint16_t Addr, uint16_t Value, modbusHandler_t *modH)
+{
+    Device_Reg  Reg;
+    for(int i = 0; i < MODBUS_MASTER_COIL_NUM ; i++)
+    {
+        if(Addr == modH->MasterDevice->Reg[i].Addr)
+        {
+            Reg.Addr = Addr;
+            Reg.Value = Value;
+            modH->MasterDevice->Reg[i].Value = Value;
+            Queue_RegUpdate(&Reg);
+        }
+    } 
+}

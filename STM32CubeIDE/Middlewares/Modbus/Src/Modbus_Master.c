@@ -7,6 +7,7 @@
 #include "timers.h"
 #include "semphr.h"
 #include "Modbus_Func.h"
+#include "RTU_Master_Function.h"
 
 
 
@@ -120,7 +121,18 @@ void MMaster_Init(void)
 	Master_Modbus.xTypeHW = USART_HW;
 	Master_Modbus.MasterDevice = &MasterDevice;
 
+	Master_Modbus.MasterDevice->Coil[0].Addr = SLAVE_0_ADDR;
+	Master_Modbus.MasterDevice->Coil[1].Addr = SLAVE_1_ADDR;
+	Master_Modbus.MasterDevice->Coil[2].Addr = SLAVE_2_ADDR;
+	Master_Modbus.MasterDevice->Coil[3].Addr = SLAVE_3_ADDR;
+	Master_Modbus.MasterDevice->Coil[4].Addr = SLAVE_4_ADDR;
 
+
+	Master_Modbus.MasterDevice->Coil[5].Addr = SLAVE_10_ADDR;
+	Master_Modbus.MasterDevice->Coil[5].Addr = SLAVE_11_ADDR;
+	Master_Modbus.MasterDevice->Coil[5].Addr = SLAVE_12_ADDR;
+	Master_Modbus.MasterDevice->Coil[5].Addr = SLAVE_13_ADDR;
+	Master_Modbus.MasterDevice->Coil[5].Addr = SLAVE_14_ADDR;
 
 
 	Master_ModbusInit(&Master_Modbus);
@@ -1548,12 +1560,12 @@ void StartTaskModbusMaster(void *argument)
 	  case MB_FC_READ_COILS:
 	  case MB_FC_READ_DISCRETE_INPUT:
 	      //call get_FC1 to transfer the incoming message to u16regs buffer
-	      get_FC1(modH);
+		  Master_Fc1(modH);
 	      break;
 	  case MB_FC_READ_INPUT_REGISTER:
 	  case MB_FC_READ_REGISTERS :
 	      // call get_FC3 to transfer the incoming message to u16regs buffer
-	      get_FC3(modH);
+		  Master_Fc3(modH);
 	      break;
 	  case MB_FC_WRITE_COIL:
 	  case MB_FC_WRITE_REGISTER :

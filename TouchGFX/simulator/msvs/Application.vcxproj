@@ -36,6 +36,9 @@
     <ClCompile Include="..\..\gui\src\light_view_screen\LIGHT_VIEWPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\light_view_screen\LIGHT_VIEWView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\light_view_screen\LIGHT_VIEWViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\slave_view_screen\SLAVE_VIEWPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\slave_view_screen\SLAVE_VIEWView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\slave_view_screen\SLAVE_VIEWViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -201,6 +204,9 @@
     <ClInclude Include="..\..\gui\include\gui\light_view_screen\LIGHT_VIEWPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\light_view_screen\LIGHT_VIEWView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\light_view_screen\LIGHT_VIEWViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\slave_view_screen\SLAVE_VIEWPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\slave_view_screen\SLAVE_VIEWView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\slave_view_screen\SLAVE_VIEWViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

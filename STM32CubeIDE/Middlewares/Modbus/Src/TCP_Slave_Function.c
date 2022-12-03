@@ -1,7 +1,7 @@
 #include "TCP_Slave_Function.h"
 #include "Modbus.h"
 #include "Modbus2Gui.h"
-
+#include "main.h"
 
 #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
 #define bitSet(value, bit) ((value) |= (1UL << (bit)))

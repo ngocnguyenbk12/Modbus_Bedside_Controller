@@ -77,6 +77,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp \
  ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/slave_view_screen/SLAVE_VIEWViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWPresenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../TouchGFX/target/generated/DoubleBufferedVideoController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/VideoWidget.hpp \
@@ -289,6 +292,12 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/time_setting_screen/TIME_SETTINGViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/time_setting_screen/TIME_SETTINGPresenter.hpp:
+
+../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWView.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/slave_view_screen/SLAVE_VIEWViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/slave_view_screen/SLAVE_VIEWPresenter.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 

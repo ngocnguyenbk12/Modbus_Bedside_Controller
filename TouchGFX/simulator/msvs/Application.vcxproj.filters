@@ -232,6 +232,18 @@
     <Filter Include="Source Files\generated\gui_generated\light_view_screen">
       <UniqueIdentifier>30F1E7C4-3AD5-3569-A7BF-72BDA4ECE220</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\slave_view_screen">
+      <UniqueIdentifier>189F0875-DC93-C840-E8BC-A947F0DAAD6A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\slave_view_screen">
+      <UniqueIdentifier>EBB72DEF-35B8-D321-A9E5-A99B55FA7F8B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\slave_view_screen">
+      <UniqueIdentifier>8DCF4C95-922B-0B8C-1339-AFD1002EA586</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\slave_view_screen">
+      <UniqueIdentifier>0C45948F-F0F3-8B2E-85A8-3B13ED9775F6</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -308,6 +320,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\light_view_screen\LIGHT_VIEWViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\light_view_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\slave_view_screen\SLAVE_VIEWPresenter.cpp">
+      <Filter>Source Files\gui\slave_view_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\slave_view_screen\SLAVE_VIEWView.cpp">
+      <Filter>Source Files\gui\slave_view_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\slave_view_screen\SLAVE_VIEWViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\slave_view_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -795,6 +816,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\light_view_screen\LIGHT_VIEWViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\light_view_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\slave_view_screen\SLAVE_VIEWPresenter.hpp">
+      <Filter>Header Files\gui\slave_view_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\slave_view_screen\SLAVE_VIEWView.hpp">
+      <Filter>Header Files\gui\slave_view_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\slave_view_screen\SLAVE_VIEWViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\slave_view_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
